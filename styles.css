@@ -1,0 +1,1117 @@
+/* ---------------- styles for text size alone ---------------- */
+
+.text40px{
+font-size: 40px;
+          }
+
+.text60px{
+font-size: 60px;
+          }
+
+.text80px{
+font-size: 80px;
+          }
+
+.text100px{
+font-size: 100px;
+          }
+
+.text120px{
+font-size: 120px;
+          }
+
+
+/* ---------------- end styles for text size alone ---------------- */
+
+
+
+
+
+/* ---------------- IDs for each <img> ---------------- */
+
+#rockImage {
+           }
+
+#paperImage {
+           }
+
+#scissorsImage {
+           }
+
+
+
+/* -------------end IDs for each <img> ---------------- */
+
+
+
+
+/* -------------IDs for <img>s that showplayer choice and computer choice ------- */
+#playerChoiceImage {
+  
+  background-color: #ccc;
+  height: 110px;
+width: 168px;
+                    }
+
+#compChoiceImage {
+  
+  background-color: #ccc;
+height: 110px;
+width: 168px;
+                    }
+
+
+
+                    /* -------------end IDs for <img>s that showplayer choice and computer choice ------- */
+
+
+
+
+
+
+
+/* ---------------- Rotate styles ---------------- */
+
+/*Rotate something by -12º*/
+.rotateMinus12 {
+  -webkit-transform: rotate(-12deg);
+  -moz-transform: rotate(-12deg);
+  -o-transform: rotate(-12deg);
+  -ms-transform: rotate(-12deg);
+  transform: rotate(-12deg);
+              }
+
+
+/*Rotate something by -9º*/
+.rotateMinus9 {
+  -webkit-transform: rotate(-9deg);
+  -moz-transform: rotate(-9deg);
+  -o-transform: rotate(-9deg);
+  -ms-transform: rotate(-9deg);
+  transform: rotate(-9deg);
+              }
+
+/*Rotate something by -6º*/
+.rotateMinus6 {
+  -webkit-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+        }
+
+/*Rotate something by 6º*/
+.rotate6 {
+  -webkit-transform: rotate(6deg);
+  -moz-transform: rotate(6deg);
+  -o-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  transform: rotate(6deg);
+        }
+
+
+/*Rotate something by 10º*/
+.rotate10 {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+        }
+
+/*Rotate something by 21º*/
+.rotate21 {
+    -webkit-transform: rotate(21deg);
+    -moz-transform: rotate(21deg);
+    -o-transform: rotate(21deg);
+    -ms-transform: rotate(21deg);
+    transform: rotate(21deg);
+          }
+
+
+/*Rotate something by 21º*/
+.rotate159 {
+    -webkit-transform: rotate(159deg);
+    -moz-transform: rotate(159deg);
+    -o-transform: rotate(159deg);
+    -ms-transform: rotate(159deg);
+    transform: rotate(159deg);
+          }
+
+
+/*Rotate something by 36º*/
+.rotate36 {
+    -webkit-transform: rotate(36deg);
+    -moz-transform: rotate(36deg);
+    -o-transform: rotate(36deg);
+    -ms-transform: rotate(36deg);
+    transform: rotate(36deg);
+          }
+
+
+
+/*Rotate something by 45º*/
+.rotate45 {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+          }
+
+/* ---------------- end Rotate styles ---------------- */
+
+
+
+
+
+
+/* ---------------- Border styles ---------------- */
+
+/*A solid black border*/
+.borderBlackSolid {
+border-style: solid;
+border-width: 5px;
+border-color: black;
+                  }
+
+/*A dashed red border*/
+.borderRedDashed {
+border-style: dashed;
+border-width: 1px;
+border-color: red;
+                  }
+
+
+/*A solid pinkish border*/
+.borderPink1Solid {
+border-style: solid;
+border-width: 1px;
+border-color: #ffb3d9;
+                  }
+
+/*A gradient border*/
+.borderPinkPurpleSolidGrad {
+border-style: solid;
+border-width: 10px;
+border-radius: 5px 10px 3px 5px;
+border-image: linear-gradient(45deg,  #743ad5,  #d53a9d) 1;
+
+                  }
+
+/* ---------------- end Border styles ---------------- */
+
+
+/* ---------------- styles for title div, start div,  ---------------- */
+
+.titleDiv{
+  border: 3px double blueviolet;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 1100px;
+  height: 120px;
+          }
+
+/* text for title */
+.titleText90px {
+  position: relative;
+  left: 15px;
+  top: -17px;
+    margin: 0px;
+    color:#ff0066 ; 
+    text-shadow: 3px 3px 4px #000;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 90px;
+    letter-spacing: -2px;
+    -webkit-text-stroke: 3px #108763;
+                 }
+  
+.startButton{
+  
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+
+  border-radius: 20px;
+  border: 3px solid black;
+  background-color: blueviolet;
+  box-shadow: 9px 9px 4px #777;
+
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  width: 200px;
+  height: 100px;
+  
+  line-height: 30px;
+  color:#fff ; 
+  font-family: 'Catamaran', sans-serif;
+    font-size: 80px;
+    letter-spacing: -1px;
+    -webkit-text-stroke: 2px #000;
+          }
+
+.startButton :hover {background-color: #ed79bd;}
+
+.startButton:active {
+  background-color: #eb969d;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#startButton{
+
+            }
+
+/* ------ Styles for New round and New game buttons ------- */
+
+.newRoundButton{
+  z-index: 10;
+  opacity: 0.3;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+
+  border-radius: 20px;
+  border: 3px solid black;
+  background-color: blueviolet;
+  box-shadow: 9px 9px 7px #333;
+
+  position: absolute;
+  top: 170px;
+  right: 230px;
+  width: 150px;
+  height: 75px;
+  
+  line-height: 30px;
+  color:#fff ; 
+  font-family: 'Catamaran', sans-serif;
+    font-size: 60px;
+    letter-spacing: -5px;
+    -webkit-text-stroke: 2px #000;
+          }
+
+.newRoundButton :hover {background-color: #ed79bd;}
+
+.newRoundButton: active {
+  background-color: #eb969d;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+                        }
+
+#newRoundButton{
+background-color: blueviolet;
+                }
+
+                /* -- -- */
+
+.newGameButton{
+  z-index: 10;
+  opacity: 0.3;  
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+
+  border-radius: 20px;
+  border: 3px solid black;
+  background-color: blueviolet;
+  box-shadow: 9px 9px 4px #777;
+
+  position: absolute;
+  top: 170px;
+  right: 30px;
+  width: 150px;
+  height: 75px;
+  
+  line-height: 30px;
+  color:#fff ; 
+  font-family: 'Catamaran', sans-serif;
+    font-size: 60px;
+    letter-spacing: -1px;
+    -webkit-text-stroke: 2px #000;
+          }
+
+.newGameButton :hover {background-color: #ed79bd;}
+
+.newGameButton:active {
+  background-color: #eb969d;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+                      }
+
+#newGameButton{
+  background-color: blueviolet;
+              }
+
+/* ------ End styles for New round and New game buttons ------- */
+
+
+
+
+
+
+
+/* ------ styles for div containing choose area, arrow SVG div, playarea, result area ------- */
+/* ------ container0 contains container1, arrowSVGdiv, container2 and container3------- */
+.container0{
+  position: absolute;
+  top: 155px;
+  left: 20px;
+  width: 1100px;
+  height: 650px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+              }
+    
+/* ------ end styles for div containing choose area, playarea, result area ------- */
+  
+
+
+/* ------ styles for svg div (arrowSVGdiv) ------- */
+#arrowSVGdiv{
+  opacity: 0.2;
+  visibility: visible;
+  position: relative;
+  right: 50px;
+  width: 150px;
+  height: 150px;
+  border: none; 
+}
+/* ------ end styles for svg div (arrowSVGdiv) ------- */
+
+
+
+/* ------ styles for divs containing playarea, You chose… box, computer chose box ------- */
+.container2{
+  opacity: 0.4;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+position: relative;
+right: 65px;
+width: 180px;
+height: 450px;
+background-color: darkgoldenrod ;
+transition: opacity 0.5s;
+            }
+
+
+/* ------ style for You chose… div ------- */
+#youChoseTextBox {
+  position: relative;
+  top: 8px;
+  margin-bottom: 10px;
+  left: -10px;    
+  display: flex ;
+  flex-direction: column;
+  justify-content: space-around ;
+  background-color: #ccc  ;     
+  z-index: 10 ;
+                   }
+
+/* ------ Three styles for <p> that contains text "You chose…" ------- */
+/* ------ For the "Y" in "You chose…" ------- */
+#youChoseText1 {
+  position: relative;
+  top: 0px;
+  left: -9px;
+  height: 0px;
+  color:#ff0066 ;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 2px #777;
+                 }
+/* ------ For the "ou" in "You chose…" ------- */
+#youChoseText2 {
+  position: relative;
+  top: -45px;
+  left: 15px;
+  height: 0px;
+  color:#ff0066 ;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 2px #777;
+                 }
+/* ------ For the "chose" in "You chose…" ------- */
+#youChoseText3 {
+  position: relative;
+  top: -85px;
+  left: 25px;
+  height: 0px;
+  color:#ff0066 ;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 2px #777;
+  text-align:center;
+               }
+
+/* ------ style for Computer chose… div ------- */
+#compChoseTextBox {
+  position: relative;
+  left: -10px;    
+  margin-bottom: 10px;
+  display: flex ;
+  flex-direction: column;
+  justify-content: center ;
+  height: 75px;
+  width: 100%;
+  background-color: #ccc  ;     
+  z-index: 10 ;
+                   }
+
+/* ------ Two styles for <p> that contains text "You chose…" ------- */
+#computerChoseText1 {
+  position: relative;
+  top: 33px;
+  color:#ff0066 ;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 2px #777;
+  text-align:center;
+  line-height: 32px;
+               }
+
+#computerChoseText2 {
+  position: relative;
+  top: -36px;
+  color:#ff0066 ;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 2px #777;
+  text-align:center;
+  line-height: 32px;
+               }
+
+
+
+#playerChoiceBox{
+  opacity:inherit;
+  visibility: hidden;  
+  position: relative;
+  overflow: hidden;
+  height: 110px;
+width: 168px;
+margin-top: 0px;
+margin-bottom: 40px;
+border-radius: 10px;
+transition: opacity 0.7s;
+                }
+
+#compChoiceBox{
+visibility: hidden;
+overflow: hidden;
+position: relative;
+height: 110px;
+width: 168px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: opacity 0.7s;
+}
+
+.resultsDiv {
+opacity: 0.3;
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
+  background-color:none;
+  border: solid red 3px ;
+  border-radius: 20px;
+position: relative;
+right: 30px;
+height: 450px;
+width: 350px;
+transition: opacity 1s;
+            }
+
+
+/* ------ end styles for divs containing playarea, You chose… box, computer chose box, arrow and results box ------- */
+
+
+
+
+/* ------ styles for div containing images and "Choose…" box" ------- */
+
+/*div Containing r,p,s images and div contiaing "Choose one" text*/
+.container1 {
+opacity: 0.4;
+
+position: relative ;
+width: 180px;
+height: 550px;
+
+display: flex ;
+flex-direction: column;
+justify-content: space-around ;
+background-color: darkgoldenrod ;
+transition: opacity 1s;
+            }
+
+/* end div Containing r,p,s images and div contiaing "Choose one" text*/
+
+
+
+/*styles for the divs that contain the r,p and s images*/
+/*div containing the rock image*/
+.rockDiv {
+position: relative ;
+height: 110px ;
+width: 168px;
+overflow: hidden;
+border-radius: 10px;
+          }
+
+
+
+/*div containing the paper image*/
+.paperDiv {
+position: relative ;
+top: 20px ;
+height: 110px ;
+width: 168px;
+overflow: hidden;
+border-radius: 10px;
+          }
+
+/*div containing the scissors image*/
+.scissorsDiv {
+position: relative ;
+left: 30px;
+height: 168px ;
+width: 110px;
+overflow: hidden;
+border-radius: 10px;
+              }
+/* end styles for the divs that contain the r,p and s images*/
+
+
+
+/* styles for the imgs that contain the r,p and s images.
+These make the images bigger (the container divs have 
+overflow property set like this: overflow: hidden, which
+stops the image from growing outside its containing div*/
+.RockScale {
+transform: scale(1.05, 1.05);
+max-width: 100%;
+  max-height: 100%;
+            }
+
+.PaperScale {
+transform: scale(1.2, 1.2);
+max-width: 100%;
+  max-height: 100%;
+            }
+
+.ScissorsScale {
+transform: scale(1.5, 1.5);
+max-width: 100%;
+  max-height: 100%;
+            }
+
+
+/* ------ end styles for div containing images and for images ------- */
+
+
+
+
+
+
+/*styles for clicking on the divs that contain the r,p and s images*/
+
+/*click style for div containing the rock image*/
+
+.rockClick{
+
+
+          }
+
+/*click style for div containing the paper image*/
+.paperClick{
+
+    
+           }
+
+/*click style for div containing the scissors image*/
+.scissorsClick{
+
+    
+               }
+
+
+
+/*styles for clicking on the divs that contain the r,p and s images*/
+
+
+
+
+/* ------ styles for div containing "Choose … " div and text images------- */
+
+/* ------container div NOT USED! ------- */
+.chooseDiv {
+position: relative;
+top: 1px;
+left: -10px;    
+display: flex ;
+flex-direction: column;
+justify-content: space-around ;
+height: 50px;
+width: 100%;
+background-color: #ccc  ;     
+z-index: 10 ;
+            }
+
+
+
+
+
+/* text with class pinkyRedText120px */
+.pinkyRedText120px {
+
+color:#ff0066 ;   
+
+font-family: 'Catamaran', sans-serif;
+font-size: 120px;
+letter-spacing: -5px;
+-webkit-text-stroke: 4px #777;
+             }
+
+
+/* #53e6b3 */
+/* text with class pinkyRedText120px */
+.pinkyRedText60px {
+
+  color:#ff0066 ; 
+  
+  font-family: 'Catamaran', sans-serif;
+  font-size: 60px;
+  letter-spacing: -5px;
+  -webkit-text-stroke: 4px #777;
+               }
+
+
+
+
+
+
+/* The text "Choose"*/
+.chooseText {
+  margin: 0px;
+  position: relative;
+  top: 0px;
+
+color:#ff0066 ;   /* remember: this is text colour */
+
+font-family: 'Catamaran', sans-serif;
+font-size: 30px;
+letter-spacing: 1px;
+-webkit-text-stroke: 2px #777;
+             }
+
+/* The text "one"*/             
+.chooseText1 {
+  
+  position: relative;
+top: 0px;
+  height: 30px;
+width: 70px;
+  color:#ff0066 ;   /* remember: this is text colour */
+font-family: 'Catamaran', sans-serif;
+font-size: 60px;
+letter-spacing: 1px;
+-webkit-text-stroke: 2px #777;
+             }
+
+
+
+
+
+
+
+
+/* ------ styles for div containing "Choose … " div and text images------- */
+
+
+
+/* ---------------- test area ---------------- */
+/* test stuff:
+#bf80ff
+border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+scissors div:
+height: 168px ;
+width: 110px;
+
+*/
+
+
+/* ---------------- the following two ARE in use ---------------- */
+.testDiv1 {
+position: relative;
+top: -20px;
+left: -27px;
+width: 250px;
+height: 70px;
+border-width: 4px;
+background: linear-gradient(45deg, #743ad5, #d53a9d);
+border-radius: 125px 460px 190px 505px;
+z-index: 2;
+          }
+
+.testDiv2 {
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+position: absolute;
+top: 10px;
+left: 20px;
+width: 210px;
+height: 50px;
+
+background-color: #eee;
+border-radius: 125px 460px 190px 505px;
+          }
+/* ---------------- end the following two ARE in use ---------------- */
+
+
+/* -- First the div that contains 
+1) the divs that contain texts "Choose" and "one"
+2) linear gradient background
+3) the white div
+--- */
+.testDivOuter{
+
+position: relative;
+top: -10px;  
+left: -40px;
+
+z-index: 10; 
+
+height: 70px;
+width: 250px;  
+
+background-color: none;
+            }
+
+.testDiv3 {    /* -- linear gradient background--- */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 250px;
+  height: 70px;
+  border-width: 4px;
+  background: linear-gradient(45deg, #743ad5, #d53a9d);
+  border-radius: 125px 460px 190px 505px;
+  z-index: 2;
+            }
+  
+  .testDiv4 {   /* -- white background--- */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 210px;
+  height: 50px;
+  
+  background-color: #eee;
+  border-radius: 125px 460px 190px 505px;
+            }
+
+/* -- Following two styles are for divs inside testDiv4 that each contain a <p>--- */
+.testInnerDiv1 {   /* contains <p> that is text "Choose"--- */
+  z-index: 15;
+  overflow: hidden;
+display: flex ;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    width: 150px;
+  height: 30px;
+
+  position: absolute;
+  top: 13px;
+  left: 0px;
+
+  background-color: none;
+             }
+ 
+.testInnerDiv2 {   /* contains <p> that is text "One"--- */
+  z-index: 15;
+  overflow: hidden;    
+display: flex ;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+  position: absolute;
+  top: 15px;
+  left: 100px;
+  
+  width: 150px;
+  height: 70px;
+
+  background-color: none;
+            }
+
+
+/* The text "Choose"*/
+.testChooseText1 {
+background-color: none  ;      
+
+color:#ff0066 ;
+font-family: 'Catamaran', sans-serif;
+font-size: 39px;
+letter-spacing: 1px;
+ -webkit-text-stroke: 2px #777;
+                  }
+
+/* The text "one"*/             
+.testOneText1 {
+  background-color: none  ;      
+  color:#ff0066 ;
+
+position: relative;
+bottom: 3px;
+
+  font-family: 'Catamaran', sans-serif;
+  font-size: 70px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 2px #777;
+              }
+
+/* ----------------  ---------------- */
+
+
+
+
+
+
+/* -------- Now divs for Results area -------- */
+
+/* -------- The div containing the <p> that is text "Result" -------- */
+.resultTextDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+position: relative;
+left: -2px;
+  
+height: 120px;
+width: 346px;
+border: 4px solid #900 ;
+/*
+border: 4px solid greenyellow ;
+*/
+                }
+
+/* -------- End div containing the <p> that is text "Result" -------- */
+
+/* -------- id for text "Result" -------- */
+#resultText{
+
+           }
+
+/* -------- Div containing div containing div containing 
+<p> that is "You win!" text -------- */
+.whoWinsDiv {
+  overflow: visible;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    
+  padding: 10px;
+  background-color: #eb9;
+  position:relative;
+  left: -1px;
+  height: 100px;
+  width: 325px;
+  border: 4px solid blueviolet ;
+             }
+
+/* -------- The <p> that is "You win!" or "Computer wins!" -------- */
+.whoWinsText {
+  line-height: 1em;
+  height: 50px;
+  width: 350px;
+
+  position: relative;
+  top: -27px;
+
+  color: #d53a9d;
+  font-size: 35px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  animation-name: whoWinsTextAnim;
+  animation-duration: 2s;
+  animation-delay: 2s;
+              }
+
+
+/* -------- div containing text "Score" -------- */              
+.scoreTextDiv{
+  line-height: 60px;
+  position: relative;
+    height: 60px;
+  width: 347px;
+  border: 2px solid #933
+            }
+
+/* -------- The <p> that is the text "Score" -------- */              
+.scoreText {
+    margin: 0px;
+  position: relative;
+  top: 0px;
+ 
+left: 20px;
+color:#ff0066 ;
+
+font-family: 'Catamaran', sans-serif;
+font-size: 60px;
+letter-spacing: 1px;
+-webkit-text-stroke: 3px #777;
+            }
+
+/* -------- The div that encloses 
+1) a div enclosing text "You" and player score
+2) a div enclosing text "Computer" and computer score
+-------- */  
+.youCompEncDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  left: -1px;
+  height: 160px;
+  width: 350px;
+  border: 1px solid blue;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+                }
+
+/* -------- The div that encloses 
+1) div for text "You:"
+2) div for text [player score]
+*/                
+.playerScoreContainer{
+display:flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+position: relative;
+height: 120px;
+width: 160px;
+border: 2px solid purple ;
+                      }
+/* -------- The div that encloses 
+1) div for text "Computer:"
+2) div for text [computer score]
+*/                
+.computerScoresContainer{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+height: 120px;
+width: 200px;
+border: 2px solid purple
+                        }
+
+/* -- The div that encloses 
+text "You:"-- */
+.scoreYouDiv{
+  display:flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+  position: relative;
+height: 55px;
+width: 120px;
+border: 2px dotted purple
+            }
+
+/* -- The div that encloses 
+text "[player score]"-- */
+.scoreScoreDiv{
+  display:flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+  position: relative;
+height: 55px;
+width: 60px;
+border: 2px dotted purple
+              }
+
+/* -- The div that encloses 
+text "Computer:"-- */
+.scoreCompDiv{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+height: 55px;
+width: 160px;
+border: 2px dotted purple
+            }
+
+/* -- The div that encloses 
+text "[computer score]"-- */
+.scoreCompScoreDiv{
+  display:flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+  position: relative;
+height: 55px;
+width: 60px;
+border: 2px dotted purple
+              }
+
+/* -------- End divs for Results area -------- */
+
+
+/* -------- Animation styles -------- */
+/* The animation code */
+/* 
+For the text that says, eg, "You lose!… " 
+(<p> of class whoWinsText )
+*/
+@keyframes whoWinsTextAnim {
+  0% {   position: relative;
+         
+         color:#ff0 ;   /* remember: this is text colour */
+                  
+        }
+         
+
+  100% { 
+       color:#ff0066 ;   /* remember: this is text colour */
+       
+      }
+       
+     }
+
+
+/* -------- End animation styles -------- */
+
