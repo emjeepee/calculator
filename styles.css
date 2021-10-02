@@ -1,68 +1,366 @@
-/* ---------------- styles for text size alone ---------------- */
+/*TEST STUFF    TEST STUFF    TEST STUFF    TEST STUFF */
 
-.text40px{
-font-size: 40px;
+
+.myTestDiv1{
+  position: absolute;
+  left: 200px;
+  top: 800px;
+  width: 550px;
+  height: 150px;
+  border: 1px solid red;
+background-color: blueviolet;
+
           }
 
-.text60px{
-font-size: 60px;
-          }
+.myTestDiv1para1{
 
-.text80px{
-font-size: 80px;
-          }
+  font-size: 26px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-.text100px{
-font-size: 100px;
-          }
+}
 
-.text120px{
-font-size: 120px;
-          }
+.myTestDiv1para1{
+color: #fff;
+  font-size: 26px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-
-/* ---------------- end styles for text size alone ---------------- */
+}
 
 
 
 
 
-/* ---------------- IDs for each <img> ---------------- */
 
-#rockImage {
+.testButton{
+position: absolute;
+left: 500px;
+top: 750px;
+width: 150px;
+height: 50px;
+border-radius: 6px;
            }
-
-#paperImage {
-           }
-
-#scissorsImage {
-           }
+/*END TEST STUFF    TEST STUFF    TEST STUFF    TEST STUFF */
 
 
+/* ----------------------------------------------------------  */
+/* ----------------------------------------------------------  */
+/* for the div 
+that obscures the 
+walnut drawer as 
+it moves */
+.hide1{
+  position: absolute;
+  left: 590px;
+  top: 0px;
+  width: 185px;
+  height: 50px;
+  background-color: #fff;
 
-/* -------------end IDs for each <img> ---------------- */
+}
 
 
+/* for instruction panel.
+This is the brushed steel
+button */
+.instructionsDiv{
+  display: block;
+  position: absolute;
+  left: 600px;
+  top: 50px;
 
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
 
-/* -------------IDs for <img>s that showplayer choice and computer choice ------- */
-#playerChoiceImage {
+  width: 155px;
+  height: 30px;
   
-  background-color: #ccc;
-  height: 110px;
-width: 168px;
-                    }
+  border-radius: 0px 0px 0px 0px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #222;
 
-#compChoiceImage {
+  background-image: url("./images/brushedChrome5.jpg");
+    
+  background-repeat: no-repeat ;
+  background-position: -160px 0px ;  
+  background-origin: content-box ;
+background-size: 355px 30px;
+
+box-shadow: 3px 3px 3px;
+
+}
+
+.instructionsDiv:active {
+  transform: translateY(3px);
+  transform: translateX(1.5px);
+  box-shadow: 3px 3px 3px white;
+                      }
+                      
+
+
+
+/*For the text <p> 
+in the header div*/
+.instructionsHeader{
+ 
+  width: 126px;
+height: 27px; 
+  font-family: 'Poiret One', cursive;
+  font-size: 26px;
+  line-height: 27px;
+  letter-spacing: 1px ;
   
-  background-color: #ccc;
-height: 110px;
-width: 168px;
-                    }
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip:text;
+  background-image: url("./images/brushedCopper1.jpg") ;
+  background-repeat: no-repeat ;
+  background-position: -40px -0px ;  
+  background-origin: content-box ;
+                   }
+
+/*The walnut drawer*/
+/*This is for the div 
+that has the walnut 
+background image
+and specifies nothing.
+It's the state of the drawer 
+when the app begins*/
+.instrDrawerDiv{
+display: none;
+}
 
 
 
-                    /* -------------end IDs for <img>s that showplayer choice and computer choice ------- */
+
+
+/*The walnut drawer*/
+/*This is for the div 
+that has the walnut 
+background image
+and specifies the animation 
+for OPENING the drawer as 
+well as how to style the drawer
+*/
+.instrDrawerDivOPEN{
+  display: block; 
+  position: absolute;
+  left: 604px;
+  top: 70px;
+
+z-index: -10;
+
+  width: 150px;
+  height: 303px;
+  
+  border-radius: 0px 0px 22px 22px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000;
+
+  /*background-image: url("./images/walnutBurr1.jpg") ;*/
+  background-image: url("./images/brushedSS1.jpg");
+  background-repeat: no-repeat ;
+  background-position: 0px -7px ;  
+  background-origin: content-box ;
+  background-size: 150px 310px;
+
+  box-shadow: 3px 3px 3px;
+
+  animation-name: openInstructionsDrawer;
+  animation-duration: 1s;
+
+}
+
+/*The walnut drawer*/
+/*This is for the div 
+that has the walnut 
+background image
+and specifies the animation 
+for CLOSING the drawer as 
+well as how to style the drawer
+*/
+.instrDrawerDivCLOSE{
+  display: block; 
+  position: absolute;
+  left: 604px;
+  top: -300px;
+
+z-index: -10;
+
+  width: 150px;
+  height: 303px;
+  
+  border-radius: 0px 0px 22px 22px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000;
+
+  /*background-image: url("./images/walnutBurr1.jpg") ;*/
+  background-image: url("./images/brushedSS1.jpg");
+  background-repeat: no-repeat ;
+  background-position: 0px -7px ;  
+  background-origin: content-box ;
+  background-size: 150px 310px;
+
+  box-shadow: 3px 3px 3px;
+
+  animation-name: closeInstructionsDrawer;
+  animation-duration: 1s;
+
+}
+
+
+
+
+
+
+/*This holds the <p>s of
+ the instruction text*/
+.instrDrawerInternalDiv{
+  position: absolute;
+  left: 8px;
+  top: 3px;
+
+  width: 130px;
+}
+
+/*The <p>s of
+ the instruction text
+ inside the drawer */
+.instrDrawerP{
+
+  position: relative;
+  left: 1px;
+  /*color: #d38fe0;*/
+  color: #e29df5;
+  /*font-family: 'Poiret One', cursive;*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.8px ;
+
+
+  text-shadow:
+    0.5px 0.5px 1.5px  #000,
+    -0.5px -0.5px 2px #000,
+    
+    -1.3px -1.3px 1px #fff
+    ;
+
+background-color: rgba(150, 150, 150, 0.1) ;
+
+}
+
+
+
+
+
+
+/* for testDiv1  */
+/* tues14sept21
+this is the ss panel 
+thru which the portholes peep
+*/
+.testDiv1{
+  position: absolute;
+  left: 200px;
+  top: 770px;
+
+  z-index: 1;
+
+  width:    455px;
+  height:   75px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+  background-color: #ffb3d9 ;
+  border: 1px solid #555;
+  border-style: double; 
+  
+  margin: 0px;
+  padding: 0px;
+         }
+
+.testDiv1para1 {
+  font-size: 26px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}        
+  
+
+
+/* The test div  
+This is the brushed ss sheet 
+through which the portholes poke*/
+.testDiv{
+z-index: 2;
+
+position: absolute;
+left: 200px;
+top: 670px;
+
+width:    455px;
+height:   75px;
+
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+
+background-image: url("./images/brushedAl5.jpg") ;
+  background-repeat: no-repeat ;
+  background-position: 0px 0px ;  
+  background-origin: content-box ;
+background-size: 455px 75px;
+
+background-color: #222 ;
+border: 1px solid #555;
+
+border-radius: 16px 16px 0px 0px;
+
+margin: 0px;
+padding: 0px;
+       }
+
+
+
+/* This is the brushed ss sheet 
+through which the portholes poke*/
+.displayPanel{
+  z-index: 2;
+  
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  
+  width:    455px;
+  height:   75px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+  background-image: url("./images/brushedAl5.jpg") ;
+    background-repeat: no-repeat ;
+    background-position: 0px 0px ;  
+    background-origin: content-box ;
+  background-size: 455px 75px;
+  
+  background-color: #222 ;
+  border: 1px solid #555;
+  
+  border-radius: 16px 16px 0px 0px;
+  
+  margin: 0px;
+  padding: 0px;
+         }
+  
 
 
 
@@ -70,118 +368,1545 @@ width: 168px;
 
 
 
-/* ---------------- Rotate styles ---------------- */
+.displayCharacterBox {
 
-/*Rotate something by -12º*/
-.rotateMinus12 {
-  -webkit-transform: rotate(-12deg);
-  -moz-transform: rotate(-12deg);
-  -o-transform: rotate(-12deg);
-  -ms-transform: rotate(-12deg);
-  transform: rotate(-12deg);
+z-index: 0;  
+position: relative;
+
+top: 1px;
+left: 2px;
+
+width:    33px;
+height:   45px;
+
+border-color:rgba(255, 255, 255, 0.1) ;
+border-width: 1px;
+border-style: solid;
+border-radius: 6px 6px 6px 6px;
+
+background-color: black;
+
+}
+
+.displayCharBoxFrame {
+
+  position: relative;
+  top: -9px;
+  
+  width:    40px;
+  height:   50px;
+  
+    border-width: 1px;
+  border-style: solid;
+
+  background-image: url("./images/brushedChrome4.jpg") ;
+  background-repeat: no-repeat ;
+  background-position: 0px 0px ;  
+  background-origin: content-box ;
+  
+  background-size: 40px 50px ;
+
+border-radius: 10px 10px 10px 10px;
+  }
+  
+
+
+/*The overflow box*/
+.overflowDiv{
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+position: absolute;
+top: 58px;
+right: 4px;
+
+z-index: 5;
+
+width: 84px;
+height: 14px;
+
+border-radius: 4px;
+border-color: #444;
+border-width: 0.5px;
+border-style: solid;
+
+background-color: black;
+ 
+
+}
+
+/*For the overflow 
+text <p>
+*/
+.oveflowText{
+  position: absolute;
+  top: -13px;
+  left: 2px;
+
+  width: 129px;
+  height: 14px;
+
+
+  font-family: 'Limelight', cursive;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1.25px ;
+  color: #ccc;
+}
+
+/*Code applies the next two classes to the "Overflow!"
+text <p> (class overflowText) when the display chars overflow
+or not
+*/
+.overflowOn{
+  opacity: 1;
+}
+
+.overflowOff{
+  opacity: 0.2;
+}
+
+
+
+/*The text is now "Rounded"!*/  
+/*The truncate box*/
+.truncateDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  position: absolute;
+  top: 58px;
+  right: 95px;
+  
+  z-index: 5;
+  
+  width: 84px;
+  height: 14px;
+  
+  border-radius: 4px;
+  border-color: #444;
+  border-width: 0.5px;
+  border-style: solid;
+  
+  background-color: black;
+   
+  
+  }
+  
+/*The text is now "Rounded"!*/
+  /*The truncate text*/
+  .truncateText{
+    position: absolute;
+    top: -13px;
+    left: 2px;
+  
+    width: 129px;
+    height: 14px;
+  
+  
+    font-family: 'Limelight', cursive;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1px ;
+    color: #ccc;
+  }
+  
+  /*
+  Code applies the next two classes to the "Overflow!"
+  text (class overflowText) when the display chars overflow
+  or not
+  */
+  .truncateOn{
+    opacity: 1;
+  }
+  
+  .truncateOff{
+    opacity: 0.2;
+  }
+  
+
+
+
+
+
+
+/*
+First assign CSS variables
+*/
+
+:root {
+  --font-size: 10px ;
+  --ratio: 1.333    ;
+  --buttTxtFontSize: 35px ;
+  --minusPlusEqualsbuttTxtFontSize: 50px ;
+  
+
+  /*
+  --h4: calc(var(--font-size) * var(--ratio));
+  --h3: calc(var(--h4) * var(--ratio));
+  --h2: calc(var(--h3) * var(--ratio));
+  --h1: calc(var(--h2) * var(--ratio));
+  */
+      }
+
+
+ /* ---------------- */
+
+
+
+
+
+ /* Now the styles */
+
+
+ 
+ /*The div containing the rosewood background pic*/
+ #outer1{
+  
+  position: absolute ;
+  width:    497px;
+  height:   396px;
+  
+  top:      65px;
+  left:     45px;
+  
+  background-image: url("./images/mahoganyGetty27.jpg") ; 
+  background-repeat: no-repeat ;
+  background-origin: content-box ;
+  background-size: 497px 396px ;
+  
+  /*from W3:
+  box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+  */
+  box-shadow: rgba(0, 0, 0, 0.80) 15px 15px 25px 1px,  rgba(153, 92, 123, 0.75) 5px 5px 15px 1px;
+
+  border: 1px solid #444;
+  border-radius: 36px 36px 36px 36px; 
+
+  padding: 0px;
+  margin: 0px;
+           }
+
+
+
+
+
+/* -- the div  that is child of #outer1-- */
+#outer{
+position: absolute ;
+top:      18px;
+left:     19px;
+
+width:    457px;
+height:   356px;
+
+border: 1px solid black;
+border-radius: 16px;
+
+background-color: #444;
+
+box-shadow: -2px -2px 3px #000 , 1px 1px 3px #fff;
+
+padding: 0px;
+margin: 0px;
+
+}
+
+/* -- the div for the display-- */
+#display{
+  position: absolute ;
+    
+  top:      0px;
+  left:     0px;
+  
+
+  width:    455px;
+  height:   75px;
+
+  background-color: #222 ;
+  border: 1px solid #555;
+
+  border-radius: 16px 16px 0px 0px;
+
+  margin: 0px;
+  padding: 0px;
+
+           }
+
+/* -- 
+Two styles, one for each of the two <p>s
+that is a child of div #display. 
+These are for size only
+-- */
+#calcDisplay {
+  width:    455px;
+  height:   73px;
+             }
+
+#calcDisplay1 {
+  width:    455px;
+  height:   73px;
+             }
+
+
+
+
+
+
+
+/* -- 
+Now two styles for the <p>s in the display. 
+-- */
+/* -- 
+First for the lilac neon-effect 
+text. Code apples this to a porthole
+div child <p> that has id, eg, 
+pos7para2
+ -- */
+ .startupMessPoiret2 {
+  
+  text-align: right;
+  font-family: 'Poiret One', cursive;
+    font-size: 36px;
+  font-stretch: expanded;
+  line-height: 39px;  
+  
+/*236, 194, 242*/
+/*color: rgba(207, 162, 245, 0.7);  */
+/* color: rgba(245, 162, 213, 0.7);  */
+/* color: rgba(234, 162, 245, 0.7);  */  
+color: rgba(236, 194, 242, 0.7);  
+  text-shadow: 
+  /*
+  1px   1px  1px rgba(255, 255, 255, 0.3)  , 
+  -1px -1px 1px rgba(255, 255, 255, 0.3);  
+  */
+  2px   2px  1px rgba(0, 0, 0, 0.7)  , 
+  -2px -2px 1px rgba(0, 0, 0, 0.7);  
+  ;
+
+
+position: relative ;
+top:      3px;
+right:    2px;  
+
+margin: 0px;
+padding: 0px;
+
+              }
+
+/* -- 
+Now for the black text 
+that goes directly behind 
+the lilac neon text and provides 
+a white flickering shadow.
+Code apples this to a porthole div 
+child <p> that has id, eg, 
+pos3para1
+ -- */
+
+.startupMessPoiret1{
+  position: absolute ;
+  top:      5px;
+  right:    0px;
+  
+  margin: 0px;
+  padding: 0px;
+
+  text-align: right;
+font-family: 'Poiret One', cursive;
+  font-size: 35px;
+  line-height: 39px;  
+  color: rgba(255, 255, 255, 1);
+  
+
+    animation: pulsate 0.01s ease-in-out infinite alternate;
+
+
+/*"fadeInOutStartup" below is the name of the animation
+as listed after @key-frames (at the end of this doc) 
+   
+    animation: fadeInOutStartup ease 3.5s;
+    -webkit-animation: fadeInOutStartup ease 3.5s;
+    -moz-animation: fadeInOutStartup ease 3.5s;
+    -o-animation: fadeInOutStartup ease 3.5s;
+    -ms-animation: fadeInOutStartup ease 3.5s;
+*/            
+           }
+
+
+/* Now a style that adds fade in and fade out to text.
+Code adds this style dynamically to the two <p>s of the 
+porthole divs when the calculator must display the error  
+message
+ */
+
+.fadeInAndOut {
+
+/*
+"fadeInOut" below is the name of the animation
+as listed after @key-frames (at the end of this doc) 
+*/
+
+  animation: fadeInOut ease 3.5s;
+  -webkit-animation: fadeInOut ease 3.5s;
+  -moz-animation: fadeInOut ease 3.5s;
+  -o-animation: fadeInOut ease 3.5s;
+  -ms-animation: fadeInOut ease 3.5s;
+
+}
+
+
+
+
+
+
+
+
+
+/* -- div for the car, etc 
+-- */
+#carEtc{
+  z-index: 5;
+  position: absolute ;
+  width:    229px;
+  height:   279px;
+  
+  top:      76px;
+  left:     0px;
+  
+  overflow: hidden;
+
+  background-image: url("./images/ss6.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: content-box ;
+  background-size: 230px 280px ;
+  
+  /*border: 1px solid blue;*/
+  border: 1px solid #444;
+  border-radius: 6px 6px 8px 16px; 
+
+  padding: 0px;
+  margin: 0px;
+           }
+
+  
+  
+/* -- div for the keypad's steel base
+This div is the parent of div #keyPad
+-- */
+#keyPadChrome {
+  width:    226px;
+  height:   280px;
+    
+  position: absolute ;
+  top:      75px;
+  left:     230px;
+  border-radius: 8px 3px 16px 8px; 
+  
+  /*background-image: url("./images/brushedChrome5.jpg");*/
+  background-image: url("./images/ss3.jpg");
+  background-repeat: no-repeat;
+  background-size: 225.5px 280px;
+  border: 1px solid #444;
+
+  padding: 0px;
+  margin: 0px;
+
               }
 
 
-/*Rotate something by -9º*/
-.rotateMinus9 {
-  -webkit-transform: rotate(-9deg);
-  -moz-transform: rotate(-9deg);
-  -o-transform: rotate(-9deg);
-  -ms-transform: rotate(-9deg);
-  transform: rotate(-9deg);
+
+/* -- div to contain divs that contain the buttons.
+This is a child of  div #keyPadChrome -- */
+#keyPad{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  
+  width:    237px;
+  height:   270px;
+    
+  position: absolute ;
+  top:      3px;
+  left:     2px;
+
+  padding: 0px;
+  margin: 0px;
+  
+           }
+
+
+/* -- Now divs to contain the key buttons -- */
+
+/* -- The first style is for the div 
+containing these buttons:
+7,8,9,x
+4,5,6,-
+1,2,3,+
+0,.,=
+ -- */
+.keysContainer {
+display: flex;
+justify-content: space-around;
+  align-items: center;
+
+width: 205px;
+height: 50px;
+
+position: relative;
+left: 7px;
+
+                      }
+
+/* -- For the div containing the AC
+and divide buttons:
+ -- */
+.containerForACdivide {
+  display: flex;
+  justify-content: space-between;
+    align-items: center;
+  
+    width: 205px;
+  height: 50px;
+
+  position: relative;
+left: 7px;
+
+                        }
+
+/* -- For the div containing
+1) the div for the 
+zero and dot buttons and 
+2) the div for the equals button:
+ -- */
+.containerZeroDotEquals {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  width: 210px;
+  height: 50px;
+                        }
+  
+#containerForZeroDot {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 150px;
+  height: 50px;
+
+  position: relative;
+  left: -5px
+                      }
+
+
+#containerForEquals {
+  position: relative;
+  left: 5px;
+  width: 52.5px;
+  height: 50px;
+
+                    }
+
+
+
+
+/* ---------------- Styles for the keys ---------------- */
+/* ---------------- Note that the keys have the 
+same class for background image but each has a different 
+class for background position. This ensures that 
+each key looks as if it came from a different piece of wood. 
+
+---------------- */
+
+/* ---------------- steel ---------------- */
+/* ---------------- buttons ---------------- */
+
+.steelButton {
+  background-image: url("./images/brushedChromeButton1.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 51px 51px ;
+
+  box-shadow: 3px 3px 3px  #666;
+  
+  border-radius: 12px;
+  
+  width: 50px;
+  height: 50px;
+
+  position: relative;
               }
 
-/*Rotate something by -6º*/
-.rotateMinus6 {
-  -webkit-transform: rotate(-6deg);
-  -moz-transform: rotate(-6deg);
-  -o-transform: rotate(-6deg);
-  -ms-transform: rotate(-6deg);
-  transform: rotate(-6deg);
-        }
 
-/*Rotate something by 6º*/
-.rotate6 {
-  -webkit-transform: rotate(6deg);
-  -moz-transform: rotate(6deg);
-  -o-transform: rotate(6deg);
-  -ms-transform: rotate(6deg);
-  transform: rotate(6deg);
-        }
+.steelButton:active {
+  box-shadow: 3px 3px 3px  #fff;
+  transform: translateY(3px);
+  transform: translateX(1.5px);
+                    }
 
+/*
+Now a class that all operand keys 
+(0->9 and dot) have.
+This simply allows them all to be 
+selected by class in the js file to have the same event 
+listener attached to them in one go. 
+This class does nothing else.
+*/
 
-/*Rotate something by 10º*/
-.rotate10 {
-  -webkit-transform: rotate(10deg);
-  -moz-transform: rotate(10deg);
-  -o-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  transform: rotate(10deg);
-        }
-
-/*Rotate something by 21º*/
-.rotate21 {
-    -webkit-transform: rotate(21deg);
-    -moz-transform: rotate(21deg);
-    -o-transform: rotate(21deg);
-    -ms-transform: rotate(21deg);
-    transform: rotate(21deg);
+.keyClassOperand{
+/*
+No styling whatsoever here.
+*/
           }
 
+/*
+Now a class that all operator keys 
+(+, -, *, /, AC and =) have.
+This simply allows them all to be 
+selected by class in the js file to have the same event 
+listener attached to them in one go. 
+This class does nothing else.
+*/
 
-/*Rotate something by 21º*/
-.rotate159 {
-    -webkit-transform: rotate(159deg);
-    -moz-transform: rotate(159deg);
-    -o-transform: rotate(159deg);
-    -ms-transform: rotate(159deg);
-    transform: rotate(159deg);
-          }
 
-
-/*Rotate something by 36º*/
-.rotate36 {
-    -webkit-transform: rotate(36deg);
-    -moz-transform: rotate(36deg);
-    -o-transform: rotate(36deg);
-    -ms-transform: rotate(36deg);
-    transform: rotate(36deg);
+.keyClassOperator{
+/*
+No styling whatsoever here.
+*/
           }
 
 
 
-/*Rotate something by 45º*/
-.rotate45 {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+
+
+
+
+/*The number buttons and the "." 
+and "AC" buttons take this style.
+It specifies, among other things, 
+background image but not position
+or font. A separate style for each
+button handles the position:
+*/
+/*black walnut*/
+.walnutButton {
+box-shadow: -1px -1px 2.5px 0.5px #ddd , 1px 1px 3px 2px #000;
+  
+  border-radius: 10px;
+  
+  width: 45px;
+  height: 45px;
+
+  position: relative;
+              }
+
+
+.walnutButton:active {
+  box-shadow: 3px 3px 3px #fff, -3px -3px 3px #fff;
+  transform: translateY(3px);
+  transform: translateX(1.5px);
+                     }
+
+
+                   
+/*Now two styles same as above but for 
+the AC <button>, which is twice as wide
+as the others*/
+.walnutButton1 {
+  display:flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  
+  background-image: url("./images/walnutNewAC.jpg") ;
+  background-size: 95px 45px ;
+
+  box-shadow: -2px -2px 3.5px 0.5px #ddd , 1px 1px 3px 2px #000;
+    
+  border-radius: 10px;
+  
+  width: 95px;
+  height: 45px;
+
+              }
+
+
+.walnutButton1:active {
+  box-shadow: 3px 3px 3px #fff, -3px -3px 3px #fff;
+  transform: translateY(3px);
+  transform: translateX(1.5px);
+                      }
+
+
+
+/*an id for the dot key. 
+No styling. This styling
+is just to let JS select 
+the dot key*/
+#dotKey {
+
+
+}
+
+
+
+/*oneTextLiWalnImagePos*/
+/*Now styles for positioning the 
+background light-walnut image 
+of the text for the appropriate 
+<p> in each button.
+NOTE: I haven't needed to have 
+styles for all keys (eg the 
+operator keys)
+*/
+.ACTextLiWalnImagePos{
+  background-position: top -50px left -50px;
+  
+                   }
+
+.sevenTextLiWalnImagePos{
+  background-position: top -100px left -5px;
+                      }
+
+
+.nineTextLiWalnImagePos{
+  background-position: -10px -10px;
+                      }
+
+.fourTextLiWalnImagePos{
+  background-position: -150px -10px;
+                      }
+
+.fiveTextLiWalnImagePos{
+  background-position: top -50px left -50px;
+                      }
+
+.sixTextLiWalnImagePos{
+  background-position: top -200px left -50px;
+                      }
+
+.oneTextLiWalnImagePos{
+  background-position: top -50px left -0px;
+                      }
+
+.twoTextLiWalnImagePos{
+  background-position: top -50px left -0px;
+                      }
+
+.threeTextLiWalnImagePos{
+  background-position: top 0px left -50px;
+                      }
+
+.zeroTextLiWalnImagePos{
+  background-position: top -60px left -150px;
+                      }
+
+.dotTextLiWalnImagePos{
+  background-position: top -80px left -50px;
+                      }
+
+
+
+/*Now styles for positioning the 
+background black-walnut image 
+of the buttons
+*/
+.ACkeyImagePosition{
+  background-position: 0px  0px;
+  
+                   }
+
+.cancelKeyImagePosition{
+  background-image: url("./images/walnutNewCkey.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                      }
+
+.sevenKeyImagePosition{
+  background-image: url("./images/walnutNew7key.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                      }
+
+.eightKeyImagePosition{
+  background-image: url("./images/walnutNew8key.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                      }
+
+.nineKeyImagePosition{
+  background-image: url("./images/walnutNew9key.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                      }
+
+.fourKeyImagePosition{
+  background-image: url("./images/walnutNew4key.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                      }
+
+.fiveKeyImagePosition{
+  background-image: url("./images/walnutNew5key.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                        }
+
+.sixKeyImagePosition{
+  background-image: url("./images/walnutNew6key.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                      }
+
+.oneKeyImagePosition{
+  background-image: url("./images/walnutNew1key.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                      }
+
+.twoKeyImagePosition{
+  background-image: url("./images/walnutNew2key.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+}
+
+.threeKeyImagePosition{
+  background-image: url("./images/walnutNew3key.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                      }
+
+.zeroKeyImagePosition{
+  background-image: url("./images/walnutNew0key.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                      }
+
+.dotKeyImagePosition{
+  background-image: url("./images/walnutNewDotkey.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 45px 45px ;
+  background-position: 0px 0px;
+                      }
+
+
+/* - - - - */
+
+.divideKeyImagePosition{
+  background-position: top -100px left -50px;
+                      }
+
+.multKeyImagePosition{
+  background-position: top -100px left -50px;
+                      }
+
+.minusKeyImagePosition{
+  background-position: top -100px left -50px;
+
+                      }
+
+.plusKeyImagePosition{
+  background-position: top -100px left -50px;
+                      }
+
+.equalsKeyImagePosition{
+  background-position: top -0px left -50px;
+                      }
+
+/* -----------------------------------*/
+
+/* ---------------- for the brushed chrome ---------------- */
+/* ---------------- for operator buttons ---------------- */
+
+/*The divide, mult, minus, plus and equals
+buttons take this style.
+It specifies, among other things, 
+background image but not position
+or font. A separate style for each
+button handles the position:
+*/
+
+.brushedChromeButton {
+  background-image: url("./images/brushedChrome2.jpg") ;
+  background-repeat: no-repeat ;
+  background-origin: border-box ;
+  background-size: 43px 43px ;
+  background-position: 1px 1px   ;
+  
+  /*box-shadow: 1.5px 1.5x 3px  #111;*/
+  box-shadow: -1px -1px 2.5px 0.2px #ddd , 1px 1px 3px 0.2px #000;
+
+  border-radius: 12px;
+  
+  width: 45px;
+  height: 45px;
+
+  position: relative;
+ 
+              }
+
+
+.brushedChromeButton:active {
+  box-shadow: 3px 3px 3px  #fff;
+  transform: translateY(3px);
+  transform: translateX(1.5px);
+  
+                    }
+
+
+
+/* To create the black walnut button 
+with raised text in white walnut the button
+element style has its background image 
+set to the black walnut image (class walnutButton).
+The button element contains two divs:
+1) The first contains button text, which 
+has a white shadow to the top and left.
+2) The second contains button text 
+and has the white walnut as background image and 
+grey shadow to right and bottom.
+Each button comprises these three elements,
+each of which has the same class from button 
+to button (actually except the AC button).
+*/
+
+
+/*Now only to position  
+SOME number buttons' 
+white-shadowed text
+(which is black) */
+
+/*for positioning the cancel button
+white shadow text */                
+.bttnTxtWhShPosCancel{
+  position: absolute;
+  top: 4px;
+  left: 17px;  
+                }
+
+/*for positioning the 9 button
+white shadow text */                
+.bttnTxtWhShPos9Button{
+  position: absolute;
+  top: 4px;
+  left: 19px;  
+                }
+
+/*for positioning the 0 button
+white shadow text */                
+.bttnTxtWhShPos0Button{
+  position: absolute;
+  top: 4px;
+  left: 19px;  
+                }
+
+
+.bttnTxtWhShPos1{
+  position: absolute;
+  top: 4px;
+  left: 20px;  
+                }
+
+/*As above, for 8 button
+white shadow text */                
+.bttnTxtWhShPos8Button{
+  position: absolute;
+  top: 4px;
+  left: 17px;  
+                }
+
+/*As above, for 4 button
+white shadow text */                
+.bttnTxtWhShPos4Button{
+  position: absolute;
+  top: 4px;
+  left: 17px;  
+                }
+
+/*As above, for 5 button
+white shadow text */                
+.bttnTxtWhShPos5Button{
+  position: absolute;
+  top: 4px;
+  left: 19px;  
+                }
+
+/*As above, for ???? button
+white shadow text */                
+.bttnTxtWhShPos8{
+  position: absolute;
+  top: 4px;
+  left: 21.5px;  
+                }
+
+/*As above, for 6 button
+white shadow text */                
+.bttnTxtWhShPos10{
+  position: absolute;
+  top: 4px;
+  left: 19px;  
+                }
+
+/*As above, for 8 button
+white shadow text */                
+.bttnTxtWhShPos8Button{
+  position: absolute;
+  top: 4px;
+  left: 17px;  
+                }
+
+
+
+/*Now as above but for the 
+divide button*/
+.bttnTxtWhShPos2{
+  position: absolute;
+  top: 3px;
+  left: 18px;  
+                }
+
+
+/*Now as above but for the 
+plus button*/
+.bttnTxtWhShPos5{
+  position: absolute;
+  top: 4px;
+  left: 15px;  
+                }
+
+/*Now as above but for the 
+equals buttons*/
+.bttnTxtWhShPos4{
+  position: absolute;
+  top: 6px;
+  left: 16px;  
+                }
+
+/*Now as above but for the 
+minus buttons*/
+.bttnTxtWhShPos6{
+  position: absolute;
+  top: 12px;
+  left: 15px;  
+                }
+
+/*Now as above but for the 
+dot button*/
+.bttnTxtWhShPos3{
+  position: absolute;
+  top: 4px;
+  left: 30px;  
+                }
+
+/*Now as above but for the 
+X button*/                
+.bttnTxtWhShPos7{
+  position: absolute;
+  top: 3px;
+  left: 18px;  
+                }
+
+/*As above, for 7 button
+white shadow text */                
+.bttnTxtWhShPos9{
+  position: absolute;
+  top: 4px;
+  left: 23.5px;  
+                }
+
+/*As above, for the AC
+button's white shadow text */                
+.bttnTxtWhShACPos1{
+  position: absolute;
+  top: 4px;
+  left: 43px;  
+                }
+
+
+
+/* The following applies to 
+all number buttons, the AC 
+button and the dot button.
+This is the style for the text 
+that has the white shadow to the top and 
+left (the text itself having color defined below)*/
+.buttonTextWhSh{
+
+  width: 100% ;
+  height: 100% ;
+
+  font-family: 'Limelight', cursive; 
+    /*font-family: Arial, Helvetica, sans-serif ;*/
+  font-size: var(--buttTxtFontSize);
+  line-height: 55px;
+
+  color: #555 ;
+
+  /*
+  MDN: The drop-shadow() function applies a drop shadow effect 
+  to the input image. A drop shadow is effectively a 
+  blurred, offset version of the input image's 
+  alpha mask drawn in a particular color, composited 
+  below the image.
+  ME: note that you can't do more than one shadow!
+    */
+  
+  -webkit-filter: drop-shadow(-1px -1px 1px #fff);
+          filter: drop-shadow(-1px -1px 1px #fff);
+          
+  padding:0;
+  margin:0;
           }
 
-/* ---------------- end Rotate styles ---------------- */
+
+          
+/* Now a style for the light walnut
+ of the number/AC/dot buttons' texts. 
+ This has a 
+ grey shadow to bottom and right.
+ This styles a <p> or a <div> (
+ I'll eventually choose one or the 
+ other) */
+
+/*First a style only to postion
+the light walnut text for the 
+number buttons
+*/
+.bttnTxtLiWalPos1{
+position: absolute;
+top: 4px;
+left: 19px;
+}
+
+/*First a style only to postion
+the light walnut text for the 
+0 button
+*/
+.bttnTxtLiWalPos0Button{
+  position: absolute;
+  top: 4px;
+  left: 19px;
+  }
+  
+
+/*First a style only to postion
+the light walnut text for the 
+2 button
+*/
+.bttnTxtLiWalPos2Button{
+  position: absolute;
+  top: 4px;
+  left: 20px;
+  }
+
+/*First a style only to postion
+the light walnut text for the 
+9 button
+*/
+.bttnTxtLiWalPos9Button{
+  position: absolute;
+  top: 4px;
+  left: 19px;
+  }
+
+/*First a style only to postion
+the light walnut text for the 
+9 button
+*/
+.bttnTxtLiWalPos5Button{
+  position: absolute;
+  top: 4px;
+  left: 19px;
+  }
+
+/*First a style only to postion
+the light walnut text for the 
+number buttons
+*/
+.bttnTxtLiWalPos3Button{
+  position: absolute;
+  top: 4px;
+  left: 20px;
+  }
+  
+/*To postion
+the light walnut text for the 
+AC button
+*/
+.bttnTxtLiWalACPos1{
+  position: absolute;
+  top: 4px;
+  left: 43px;
+  }
+
+/*Now as above but for light 
+walnut text for the 
+6 button
+*/
+.bttnTxtLiWalPos10{
+  position: absolute;
+  top: 4px;
+  left: 19px;
+  }
+
+/*Now as above but for the 
+cancel button
+*/
+  .bttnTxtLiWalPos1{
+    position: absolute;
+    top: 4px;
+    left: 17px;
+    }
+
+/*Now as above but for the 
+divide buttons
+*/
+.bttnTxtLiWalPos2{
+  position: absolute;
+  top: 3px;
+  left: 18px;
+  }
+
+/*Now as above but for the 
+equals button
+*/
+.bttnTxtLiWalPos4{
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  }
+
+/*Now as above but for the 
+plus button
+*/
+.bttnTxtLiWalPos5{
+  position: absolute;
+  top: 3px;
+  left: 15px;
+  }
+
+/*Now as above but for the 
+minus button
+*/
+.bttnTxtLiWalPos6{
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  }
+
+/*Now as above but for the 
+minus button
+*/  
+  .bttnTxtLiWalPos7{
+    position: absolute;
+    top: 3px;
+    left: 18px;
+    }
+    
+
+  /*Now as above but for the 
+dot button
+*/
+  .bttnTxtLiWalPos3{
+    position: absolute;
+    top: 4px;
+    left: 30px;
+    }
+  
+/*Now as above but for the 
+7 button
+*/
+.bttnTxtLiWalPos8{
+  position: absolute;
+  top: 4px;
+  left: 21.5px;
+  }
+
+/*Now as above but for the 
+9 button
+*/
+.bttnTxtLiWalPos9{
+  position: absolute;
+  top: 4px;
+  left: 23.5px;
+  }
 
 
 
+
+
+/*For the light walnut text*/
+ .buttonTextLiWal{
+
+  background-image: url("./images/lightWalnutFour.jpg") ;
+  
+  background-repeat: no-repeat ;
+  
+  background-origin: content-box ;
+  
+  background-size: 300px 203px ;
+   
+  width: 100% ;
+  height: 100% ;
+  /*the following doesn't work as you'd expect: ;*/
+  /* box-shadow: 5px 5px 2px black;*/
+  /*The following doesn't work as you'd expect: ;*/
+  /* text-shadow: 5px 5px 2px black; */
+  /* text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000; */
+
+  background-clip:text ; 
+  font-family: 'Limelight', cursive; 
+  /*font-family: Arial, Helvetica, sans-serif ;*/
+  font-size: var(--buttTxtFontSize);
+  line-height: 55px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip:text;
+  
+  /*
+  MDN: The drop-shadow() function applies a drop shadow effect 
+  to the input image. A drop shadow is effectively a 
+  blurred, offset version of the input image's 
+  alpha mask drawn in a particular color, composited 
+  below the image.
+  ME: note that you can't do more than one shadow!
+    */
+  
+  -webkit-filter: drop-shadow(2px 3px 1.5px #111);
+          filter: drop-shadow(2px 3px 1.5px #111);
+          
+  padding:0;
+  margin:0;
+          }
+
+
+/* The following applies to 
+the divide and mult operator buttons.
+This is the style for the text 
+that has the white shadow to the top and 
+left (the text itself having color defined below)*/
+.buttonTextWhSh{
+
+  width: 100% ;
+  height: 100% ;
+
+  font-family: 'Limelight', cursive; 
+  /*font-family: Arial, Helvetica, sans-serif ;*/
+  font-size: var(--buttTxtFontSize);
+  line-height: 55px;
+
+  color: #555 ;
+
+  /*
+  MDN: The drop-shadow() function applies a drop shadow effect 
+  to the input image. A drop shadow is effectively a 
+  blurred, offset version of the input image's 
+  alpha mask drawn in a particular color, composited 
+  below the image.
+  ME: note that you can't do more than one shadow!
+    */
+  
+  -webkit-filter: drop-shadow(-1px -1px 1px #fff);
+          filter: drop-shadow(-1px -1px 1px #fff);
+          
+  padding:0;
+  margin:0;
+          }
+
+
+          /**/
+
+/* The following applies to 
+the minus, plus and equals operator buttons.
+This is the style for the text 
+that has the white shadow to the top and 
+left (the text itself having color defined below)*/
+.buttonTextMinusPlusEqualsWhSh{
+
+  width: 100% ;
+  height: 100% ;
+
+  font-family: 'Limelight', cursive; 
+  /*font-family: Arial, Helvetica, sans-serif ;*/
+  font-size: var(--minusPlusEqualsbuttTxtFontSize);
+  line-height: 55px;
+
+  color: #555 ;
+
+  /*
+  MDN: The drop-shadow() function applies a drop shadow effect 
+  to the input image. A drop shadow is effectively a 
+  blurred, offset version of the input image's 
+  alpha mask drawn in a particular color, composited 
+  below the image.
+  ME: note that you can't do more than one shadow!
+    */
+  
+  -webkit-filter: drop-shadow(-1px -1px 1px #fff);
+          filter: drop-shadow(-1px -1px 1px #fff);
+          
+  padding:0;
+  margin:0;
+          }
+
+
+/*For the light walnut text
+of the minus, plus and equals
+buttons*/
+.buttonTextMinusPlusEqualsLiWal{
+
+
+  background-image: url("./images/lightWalnutTwo.jpg") ;
+  background-repeat: no-repeat ;
+  
+  background-origin: content-box ;
+  
+  background-size: 300px 203px ;
+   
+  width: 100% ;
+  height: 100% ;
+  /*the following doesn't work as you'd expect: ;*/
+  /* box-shadow: 5px 5px 2px black;*/
+  /*The following doesn't work as you'd expect: ;*/
+  /* text-shadow: 5px 5px 2px black; */
+  /* text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000; */
+
+  background-clip:text ; 
+  font-family: 'Limelight', cursive; 
+  /*font-family: Arial, Helvetica, sans-serif ;*/
+  font-size: var(--minusPlusEqualsbuttTxtFontSize);
+  line-height: 55px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip:text;
+  
+  /*
+  MDN: The drop-shadow() function applies a drop shadow effect 
+  to the input image. A drop shadow is effectively a 
+  blurred, offset version of the input image's 
+  alpha mask drawn in a particular color, composited 
+  below the image.
+  ME: note that you can't do more than one shadow!
+    */
+  
+  -webkit-filter: drop-shadow(2px 3px 1.5px #111);
+          filter: drop-shadow(2px 3px 1.5px #111);
+          
+  padding:0;
+  margin:0;
+          }
+
+
+
+
+
+
+/* Now a style only for positioning 
+the text (walnut and black) of 
+the mult button */
+.multPos{
+  top: -6px;
+  left: 1px;
+          }
+  
+
+
+
+/* Now a style only for positioning 
+the text (walnut and black) of 
+the mult button */
+.cancelButtonPos{
+  position: relative;
+  left: 1px;
+  top: 0px;
+          }
+
+/* A few styles for positioning 
+the equals, divide, dot buttons */
+
+.equalsButtonPos{
+  position: relative;
+  left: 3px;
+  top: 2px;
+                }
+
+.divideButtonPos{
+  position: relative;
+  left: -1px;
+                }
+
+.multButtonPos{
+  position: relative;
+  left: 2.5px;
+                }
+
+.minusButtonPos{
+  position: relative;
+  left: 2.5px;
+                }
+
+.plusButtonPos{
+  position: relative;
+  left: 2.5px;
+                }
+
+.equalsButtonPos{
+  position: relative;
+  left: 5.5px;
+                }
+
+.dotKeyPosition {
+  position: relative ;
+  left: 26px;  
+  top: -0px;
+                  }
+  
+.ACKeyPosition {
+  position: relative ;
+  left: 4px;  
+                  }
+  
+.zeroKeyPosition {
+  position: relative ;
+  left: -1px;  
+  top: -0px;
+                  }
 
 
 
 /* ---------------- Border styles ---------------- */
-
-/*A solid black border*/
-.borderBlackSolid {
-border-style: solid;
-border-width: 5px;
-border-color: black;
-                  }
-
-/*A dashed red border*/
-.borderRedDashed {
-border-style: dashed;
-border-width: 1px;
-border-color: red;
-                  }
-
 
 /*A solid pinkish border*/
 .borderPink1Solid {
@@ -190,162 +1915,17 @@ border-width: 1px;
 border-color: #ffb3d9;
                   }
 
-/*A gradient border*/
-.borderPinkPurpleSolidGrad {
-border-style: solid;
-border-width: 10px;
-border-radius: 5px 10px 3px 5px;
-border-image: linear-gradient(45deg,  #743ad5,  #d53a9d) 1;
 
-                  }
 
 /* ---------------- end Border styles ---------------- */
 
 
-/* ---------------- styles for title div, start div,  ---------------- */
+/* ---------------- xxx---------------- */
 
-.titleDiv{
-  border: 3px double blueviolet;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 1100px;
-  height: 120px;
-          }
-
-/* text for title */
-.titleText90px {
-  position: relative;
-  left: 15px;
-  top: -17px;
-    margin: 0px;
-    color:#ff0066 ; 
-    text-shadow: 3px 3px 4px #000;
-    font-family: 'Catamaran', sans-serif;
-    font-size: 90px;
-    letter-spacing: -2px;
-    -webkit-text-stroke: 3px #108763;
-                 }
   
-.startButton{
-  
-  display: inline-block;
-  cursor: pointer;
-  padding: 0px;
-  margin: 0px;
-
-  border-radius: 20px;
-  border: 3px solid black;
-  background-color: blueviolet;
-  box-shadow: 9px 9px 4px #777;
-
-  position: absolute;
-  top: 10px;
-  right: 30px;
-  width: 200px;
-  height: 100px;
-  
-  line-height: 30px;
-  color:#fff ; 
-  font-family: 'Catamaran', sans-serif;
-    font-size: 80px;
-    letter-spacing: -1px;
-    -webkit-text-stroke: 2px #000;
-          }
-
-.startButton :hover {background-color: #ed79bd;}
-
-.startButton:active {
-  background-color: #eb969d;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-#startButton{
-
-            }
-
-/* ------ Styles for New round and New game buttons ------- */
-
-.newRoundButton{
-  z-index: 10;
-  opacity: 0.3;
-  display: inline-block;
-  cursor: pointer;
-  padding: 0px;
-  margin: 0px;
-
-  border-radius: 20px;
-  border: 3px solid black;
-  background-color: blueviolet;
-  box-shadow: 9px 9px 7px #333;
-
-  position: absolute;
-  top: 170px;
-  right: 230px;
-  width: 150px;
-  height: 75px;
-  
-  line-height: 30px;
-  color:#fff ; 
-  font-family: 'Catamaran', sans-serif;
-    font-size: 60px;
-    letter-spacing: -5px;
-    -webkit-text-stroke: 2px #000;
-          }
-
-.newRoundButton :hover {background-color: #ed79bd;}
-
-.newRoundButton: active {
-  background-color: #eb969d;
-  box-shadow: 0 5px #666;
-  transform: translateY(2px);
-                        }
-
-#newRoundButton{
-background-color: blueviolet;
-                }
 
                 /* -- -- */
 
-.newGameButton{
-  z-index: 10;
-  opacity: 0.3;  
-  display: inline-block;
-  cursor: pointer;
-  padding: 0px;
-  margin: 0px;
-
-  border-radius: 20px;
-  border: 3px solid black;
-  background-color: blueviolet;
-  box-shadow: 9px 9px 4px #777;
-
-  position: absolute;
-  top: 170px;
-  right: 30px;
-  width: 150px;
-  height: 75px;
-  
-  line-height: 30px;
-  color:#fff ; 
-  font-family: 'Catamaran', sans-serif;
-    font-size: 60px;
-    letter-spacing: -1px;
-    -webkit-text-stroke: 2px #000;
-          }
-
-.newGameButton :hover {background-color: #ed79bd;}
-
-.newGameButton:active {
-  background-color: #eb969d;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-                      }
-
-#newGameButton{
-  background-color: blueviolet;
-              }
 
 /* ------ End styles for New round and New game buttons ------- */
 
@@ -355,763 +1935,224 @@ background-color: blueviolet;
 
 
 
-/* ------ styles for div containing choose area, arrow SVG div, playarea, result area ------- */
-/* ------ container0 contains container1, arrowSVGdiv, container2 and container3------- */
-.container0{
-  position: absolute;
-  top: 155px;
-  left: 20px;
-  width: 1100px;
-  height: 650px;
-
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-              }
-    
-/* ------ end styles for div containing choose area, playarea, result area ------- */
-  
-
-
-/* ------ styles for svg div (arrowSVGdiv) ------- */
-#arrowSVGdiv{
-  opacity: 0.2;
-  visibility: visible;
-  position: relative;
-  right: 50px;
-  width: 150px;
-  height: 150px;
-  border: none; 
-}
-/* ------ end styles for svg div (arrowSVGdiv) ------- */
-
-
-
-/* ------ styles for divs containing playarea, You chose… box, computer chose box ------- */
-.container2{
-  opacity: 0.4;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-position: relative;
-right: 65px;
-width: 180px;
-height: 450px;
-background-color: darkgoldenrod ;
-transition: opacity 0.5s;
-            }
-
-
-/* ------ style for You chose… div ------- */
-#youChoseTextBox {
-  position: relative;
-  top: 8px;
-  margin-bottom: 10px;
-  left: -10px;    
-  display: flex ;
-  flex-direction: column;
-  justify-content: space-around ;
-  background-color: #ccc  ;     
-  z-index: 10 ;
-                   }
-
-/* ------ Three styles for <p> that contains text "You chose…" ------- */
-/* ------ For the "Y" in "You chose…" ------- */
-#youChoseText1 {
-  position: relative;
-  top: 0px;
-  left: -9px;
-  height: 0px;
-  color:#ff0066 ;
-  font-family: 'Catamaran', sans-serif;
-  font-size: 30px;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 2px #777;
-                 }
-/* ------ For the "ou" in "You chose…" ------- */
-#youChoseText2 {
-  position: relative;
-  top: -45px;
-  left: 15px;
-  height: 0px;
-  color:#ff0066 ;
-  font-family: 'Catamaran', sans-serif;
-  font-size: 30px;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 2px #777;
-                 }
-/* ------ For the "chose" in "You chose…" ------- */
-#youChoseText3 {
-  position: relative;
-  top: -85px;
-  left: 25px;
-  height: 0px;
-  color:#ff0066 ;
-  font-family: 'Catamaran', sans-serif;
-  font-size: 30px;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 2px #777;
-  text-align:center;
-               }
-
-/* ------ style for Computer chose… div ------- */
-#compChoseTextBox {
-  position: relative;
-  left: -10px;    
-  margin-bottom: 10px;
-  display: flex ;
-  flex-direction: column;
-  justify-content: center ;
-  height: 75px;
-  width: 100%;
-  background-color: #ccc  ;     
-  z-index: 10 ;
-                   }
-
-/* ------ Two styles for <p> that contains text "You chose…" ------- */
-#computerChoseText1 {
-  position: relative;
-  top: 33px;
-  color:#ff0066 ;
-  font-family: 'Catamaran', sans-serif;
-  font-size: 30px;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 2px #777;
-  text-align:center;
-  line-height: 32px;
-               }
-
-#computerChoseText2 {
-  position: relative;
-  top: -36px;
-  color:#ff0066 ;
-  font-family: 'Catamaran', sans-serif;
-  font-size: 30px;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 2px #777;
-  text-align:center;
-  line-height: 32px;
-               }
-
-
-
-#playerChoiceBox{
-  opacity:inherit;
-  visibility: hidden;  
-  position: relative;
-  overflow: hidden;
-  height: 110px;
-width: 168px;
-margin-top: 0px;
-margin-bottom: 40px;
-border-radius: 10px;
-transition: opacity 0.7s;
-                }
-
-#compChoiceBox{
-visibility: hidden;
-overflow: hidden;
-position: relative;
-height: 110px;
-width: 168px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  transition: opacity 0.7s;
-}
-
-.resultsDiv {
-opacity: 0.3;
-  display: flex;
-flex-direction: column;
-justify-content: space-between;
-  background-color:none;
-  border: solid red 3px ;
-  border-radius: 20px;
-position: relative;
-right: 30px;
-height: 450px;
-width: 350px;
-transition: opacity 1s;
-            }
-
-
-/* ------ end styles for divs containing playarea, You chose… box, computer chose box, arrow and results box ------- */
-
-
-
-
-/* ------ styles for div containing images and "Choose…" box" ------- */
-
-/*div Containing r,p,s images and div contiaing "Choose one" text*/
-.container1 {
-opacity: 0.4;
-
-position: relative ;
-width: 180px;
-height: 550px;
-
-display: flex ;
-flex-direction: column;
-justify-content: space-around ;
-background-color: darkgoldenrod ;
-transition: opacity 1s;
-            }
-
-/* end div Containing r,p,s images and div contiaing "Choose one" text*/
-
-
-
-/*styles for the divs that contain the r,p and s images*/
-/*div containing the rock image*/
-.rockDiv {
-position: relative ;
-height: 110px ;
-width: 168px;
-overflow: hidden;
-border-radius: 10px;
-          }
-
-
-
-/*div containing the paper image*/
-.paperDiv {
-position: relative ;
-top: 20px ;
-height: 110px ;
-width: 168px;
-overflow: hidden;
-border-radius: 10px;
-          }
-
-/*div containing the scissors image*/
-.scissorsDiv {
-position: relative ;
-left: 30px;
-height: 168px ;
-width: 110px;
-overflow: hidden;
-border-radius: 10px;
-              }
-/* end styles for the divs that contain the r,p and s images*/
-
-
-
-/* styles for the imgs that contain the r,p and s images.
-These make the images bigger (the container divs have 
-overflow property set like this: overflow: hidden, which
-stops the image from growing outside its containing div*/
-.RockScale {
-transform: scale(1.05, 1.05);
-max-width: 100%;
-  max-height: 100%;
-            }
-
-.PaperScale {
-transform: scale(1.2, 1.2);
-max-width: 100%;
-  max-height: 100%;
-            }
-
-.ScissorsScale {
-transform: scale(1.5, 1.5);
-max-width: 100%;
-  max-height: 100%;
-            }
-
-
-/* ------ end styles for div containing images and for images ------- */
-
-
-
-
-
-
-/*styles for clicking on the divs that contain the r,p and s images*/
-
-/*click style for div containing the rock image*/
-
-.rockClick{
-
-
-          }
-
-/*click style for div containing the paper image*/
-.paperClick{
-
-    
-           }
-
-/*click style for div containing the scissors image*/
-.scissorsClick{
-
-    
-               }
-
-
-
-/*styles for clicking on the divs that contain the r,p and s images*/
-
-
-
-
-/* ------ styles for div containing "Choose … " div and text images------- */
-
-/* ------container div NOT USED! ------- */
-.chooseDiv {
-position: relative;
-top: 1px;
-left: -10px;    
-display: flex ;
-flex-direction: column;
-justify-content: space-around ;
-height: 50px;
-width: 100%;
-background-color: #ccc  ;     
-z-index: 10 ;
-            }
-
-
-
-
-
-/* text with class pinkyRedText120px */
-.pinkyRedText120px {
-
-color:#ff0066 ;   
-
-font-family: 'Catamaran', sans-serif;
-font-size: 120px;
-letter-spacing: -5px;
--webkit-text-stroke: 4px #777;
-             }
-
-
-/* #53e6b3 */
-/* text with class pinkyRedText120px */
-.pinkyRedText60px {
-
-  color:#ff0066 ; 
-  
-  font-family: 'Catamaran', sans-serif;
-  font-size: 60px;
-  letter-spacing: -5px;
-  -webkit-text-stroke: 4px #777;
-               }
-
-
-
-
-
-
-/* The text "Choose"*/
-.chooseText {
-  margin: 0px;
-  position: relative;
-  top: 0px;
-
-color:#ff0066 ;   /* remember: this is text colour */
-
-font-family: 'Catamaran', sans-serif;
-font-size: 30px;
-letter-spacing: 1px;
--webkit-text-stroke: 2px #777;
-             }
-
-/* The text "one"*/             
-.chooseText1 {
-  
-  position: relative;
-top: 0px;
-  height: 30px;
-width: 70px;
-  color:#ff0066 ;   /* remember: this is text colour */
-font-family: 'Catamaran', sans-serif;
-font-size: 60px;
-letter-spacing: 1px;
--webkit-text-stroke: 2px #777;
-             }
-
-
-
-
-
-
-
-
-/* ------ styles for div containing "Choose … " div and text images------- */
-
-
-
-/* ---------------- test area ---------------- */
-/* test stuff:
-#bf80ff
-border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-scissors div:
-height: 168px ;
-width: 110px;
-
-*/
-
-
-/* ---------------- the following two ARE in use ---------------- */
-.testDiv1 {
-position: relative;
-top: -20px;
-left: -27px;
-width: 250px;
-height: 70px;
-border-width: 4px;
-background: linear-gradient(45deg, #743ad5, #d53a9d);
-border-radius: 125px 460px 190px 505px;
-z-index: 2;
-          }
-
-.testDiv2 {
-display: flex;
-flex-direction: column;
-justify-content: center;
-
-position: absolute;
-top: 10px;
-left: 20px;
-width: 210px;
-height: 50px;
-
-background-color: #eee;
-border-radius: 125px 460px 190px 505px;
-          }
-/* ---------------- end the following two ARE in use ---------------- */
-
-
-/* -- First the div that contains 
-1) the divs that contain texts "Choose" and "one"
-2) linear gradient background
-3) the white div
---- */
-.testDivOuter{
-
-position: relative;
-top: -10px;  
-left: -40px;
-
-z-index: 10; 
-
-height: 70px;
-width: 250px;  
-
-background-color: none;
-            }
-
-.testDiv3 {    /* -- linear gradient background--- */
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 250px;
-  height: 70px;
-  border-width: 4px;
-  background: linear-gradient(45deg, #743ad5, #d53a9d);
-  border-radius: 125px 460px 190px 505px;
-  z-index: 2;
-            }
-  
-  .testDiv4 {   /* -- white background--- */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  width: 210px;
-  height: 50px;
-  
-  background-color: #eee;
-  border-radius: 125px 460px 190px 505px;
-            }
-
-/* -- Following two styles are for divs inside testDiv4 that each contain a <p>--- */
-.testInnerDiv1 {   /* contains <p> that is text "Choose"--- */
-  z-index: 15;
-  overflow: hidden;
-display: flex ;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-    width: 150px;
-  height: 30px;
-
-  position: absolute;
-  top: 13px;
-  left: 0px;
-
-  background-color: none;
-             }
- 
-.testInnerDiv2 {   /* contains <p> that is text "One"--- */
-  z-index: 15;
-  overflow: hidden;    
-display: flex ;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-  position: absolute;
-  top: 15px;
-  left: 100px;
-  
-  width: 150px;
-  height: 70px;
-
-  background-color: none;
-            }
-
-
-/* The text "Choose"*/
-.testChooseText1 {
-background-color: none  ;      
-
-color:#ff0066 ;
-font-family: 'Catamaran', sans-serif;
-font-size: 39px;
-letter-spacing: 1px;
- -webkit-text-stroke: 2px #777;
-                  }
-
-/* The text "one"*/             
-.testOneText1 {
-  background-color: none  ;      
-  color:#ff0066 ;
-
-position: relative;
-bottom: 3px;
-
-  font-family: 'Catamaran', sans-serif;
-  font-size: 70px;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 2px #777;
-              }
-
-/* ----------------  ---------------- */
-
-
-
-
-
-
-/* -------- Now divs for Results area -------- */
-
-/* -------- The div containing the <p> that is text "Result" -------- */
-.resultTextDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
-position: relative;
-left: -2px;
-  
-height: 120px;
-width: 346px;
-border: 4px solid #900 ;
-/*
-border: 4px solid greenyellow ;
-*/
-                }
-
-/* -------- End div containing the <p> that is text "Result" -------- */
-
-/* -------- id for text "Result" -------- */
-#resultText{
-
-           }
-
-/* -------- Div containing div containing div containing 
-<p> that is "You win!" text -------- */
-.whoWinsDiv {
-  overflow: visible;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-    
-  padding: 10px;
-  background-color: #eb9;
-  position:relative;
-  left: -1px;
-  height: 100px;
-  width: 325px;
-  border: 4px solid blueviolet ;
-             }
-
-/* -------- The <p> that is "You win!" or "Computer wins!" -------- */
-.whoWinsText {
-  line-height: 1em;
-  height: 50px;
-  width: 350px;
-
-  position: relative;
-  top: -27px;
-
-  color: #d53a9d;
-  font-size: 35px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-
-  animation-name: whoWinsTextAnim;
-  animation-duration: 2s;
-  animation-delay: 2s;
-              }
-
-
-/* -------- div containing text "Score" -------- */              
-.scoreTextDiv{
-  line-height: 60px;
-  position: relative;
-    height: 60px;
-  width: 347px;
-  border: 2px solid #933
-            }
-
-/* -------- The <p> that is the text "Score" -------- */              
-.scoreText {
-    margin: 0px;
-  position: relative;
-  top: 0px;
- 
-left: 20px;
-color:#ff0066 ;
-
-font-family: 'Catamaran', sans-serif;
-font-size: 60px;
-letter-spacing: 1px;
--webkit-text-stroke: 3px #777;
-            }
-
-/* -------- The div that encloses 
-1) a div enclosing text "You" and player score
-2) a div enclosing text "Computer" and computer score
--------- */  
-.youCompEncDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  position: relative;
-  left: -1px;
-  height: 160px;
-  width: 350px;
-  border: 1px solid blue;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-                }
-
-/* -------- The div that encloses 
-1) div for text "You:"
-2) div for text [player score]
-*/                
-.playerScoreContainer{
-display:flex;
-flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-position: relative;
-height: 120px;
-width: 160px;
-border: 2px solid purple ;
-                      }
-/* -------- The div that encloses 
-1) div for text "Computer:"
-2) div for text [computer score]
-*/                
-.computerScoresContainer{
-  display:flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  position: relative;
-height: 120px;
-width: 200px;
-border: 2px solid purple
-                        }
-
-/* -- The div that encloses 
-text "You:"-- */
-.scoreYouDiv{
-  display:flex;
-flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-  position: relative;
-height: 55px;
-width: 120px;
-border: 2px dotted purple
-            }
-
-/* -- The div that encloses 
-text "[player score]"-- */
-.scoreScoreDiv{
-  display:flex;
-flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-  position: relative;
-height: 55px;
-width: 60px;
-border: 2px dotted purple
-              }
-
-/* -- The div that encloses 
-text "Computer:"-- */
-.scoreCompDiv{
-  display:flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  position: relative;
-height: 55px;
-width: 160px;
-border: 2px dotted purple
-            }
-
-/* -- The div that encloses 
-text "[computer score]"-- */
-.scoreCompScoreDiv{
-  display:flex;
-flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-  position: relative;
-height: 55px;
-width: 60px;
-border: 2px dotted purple
-              }
 
 /* -------- End divs for Results area -------- */
 
 
 /* -------- Animation styles -------- */
 /* The animation code */
-/* 
-For the text that says, eg, "You lose!… " 
-(<p> of class whoWinsText )
-*/
-@keyframes whoWinsTextAnim {
-  0% {   position: relative;
-         
-         color:#ff0 ;   /* remember: this is text colour */
-                  
-        }
-         
 
-  100% { 
-       color:#ff0066 ;   /* remember: this is text colour */
-       
+/* Removed from below: 50% {opacity:0.7;} */
+/* First for the text "Deco calculator …",
+which appears on startup.
+fadeInOutStartup is the name of the animation */
+@keyframes fadeInOutStartup {
+  0% {opacity:0;}
+  100% {opacity:1.0;}
+                          }
+
+@-moz-keyframes fadeInOutStartup {
+  0% {opacity:0;}
+  100% {opacity:1.0;}
+                              }
+
+@-webkit-keyframes fadeInOutStartup {
+  0% {opacity:0;}
+  100% {opacity:1.0;}
+                                  }
+
+@-o-keyframes fadeInOutStartup {
+  0% {opacity:0;}
+  100% {opacity:1.0;}
+                            }
+
+@-ms-keyframes fadeInOutStartup {
+  0% {opacity:0;}
+  100% {opacity:1.0;}
+                               }
+
+
+
+/* Now for the error messages */
+@keyframes fadeInOut {
+  0%   {opacity:0;}
+  50%  {opacity:1;}
+  100% {opacity:0;}
+                              }
+
+@-moz-keyframes fadeInOut {
+  0%   {opacity:0;}
+  50%  {opacity:1;}
+  100% {opacity:0;}
+                                   }
+
+@-webkit-keyframes fadeInOut {
+  0%   {opacity:0;}
+  50%  {opacity:1;}
+  100% {opacity:0;}
+                                      }
+
+@-o-keyframes fadeInOut {
+  0%   {opacity:0;}
+  50%  {opacity:1;}
+  100% {opacity:0;}
+                                 }
+
+@-ms-keyframes fadeInOut {
+  0%   {opacity:0;}
+  50%  {opacity:1;}
+  100% {opacity:0;}
+                                  }
+                                  
+
+/* -------- text flickering glow -------- */
+
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #fff,
+      0 0 80px #fff,
+      0 0 90px #fff,
+      0 0 100px #fff,
+      0 0 150px #fff;
+  }
+ 0% {
+    /* A slightly smaller blur radius */
+    text-shadow:
+      0 0 2px #fff,
+      0 0 9px #fff,
+      0 0 17px #fff,
+      0 0 38px #fff,
+      0 0 76px #fff,
+      0 0 84px #fff,
+      0 0 96px #ff6600,
+      0 0 145px #ff6600;
+  }
+}
+  
+  @-moz-keyframes pulsate {
+    100% {
+      /* Larger blur radius */
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #fff,
+      0 0 80px #fff,
+      0 0 90px #fff,
+      0 0 100px #fff,
+      0 0 150px #fff;
+    }
+   0% {
+      /* A slightly smaller blur radius */
+      text-shadow:
+      0 0 2px #fff,
+      0 0 9px #fff,
+      0 0 17px #fff,
+      0 0 38px #fff,
+      0 0 76px #fff,
+      0 0 84px #fff,
+      0 0 96px #fff,
+      0 0 145px #fff;
+    }
+  }    
+     @-webkit-keyframes pulsate {
+      100% {
+        /* Larger blur radius */
+        text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #fff,
+      0 0 80px #fff,
+      0 0 90px #fff,
+      0 0 100px #fff,
+      0 0 150px #fff;
       }
-       
-     }
+     0% {
+        /* A slightly smaller blur radius */
+        text-shadow:
+        0 0 2px #fff,
+        0 0 9px #fff,
+        0 0 17px #fff,
+        0 0 38px #fff,
+        0 0 76px #fff,
+        0 0 84px #fff,
+        0 0 96px #fff,
+        0 0 145px #fff;
+      }
+    }    
+       @-o-keyframes pulsate {
+        100% {
+          /* Larger blur radius */
+          text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #fff,
+      0 0 80px #fff,
+      0 0 90px #fff,
+      0 0 100px #fff,
+      0 0 150px #fff;
+        }
+       0% {
+          /* A slightly smaller blur radius */
+          text-shadow:
+          0 0 2px #fff,
+          0 0 9px #fff,
+          0 0 17px #fff,
+          0 0 38px #fff,
+          0 0 76px #fff,
+          0 0 84px #fff,
+          0 0 96px #fff,
+          0 0 145px #fff;
+        }
+      }
+        @-ms-keyframes pulsate {
+          100% {
+            /* Larger blur radius */
+            
+            text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #fff,
+            0 0 80px #fff,
+            0 0 90px #fff,
+            0 0 100px #fff,
+            0 0 150px #fff;
+          }
+         0% {
+            /* A slightly smaller blur radius */
+            text-shadow:
+            0 0 2px #fff,
+            0 0 9px #fff,
+            0 0 17px #fff,
+            0 0 38px #fff,
+            0 0 76px #fff,
+            0 0 84px #fff,
+            0 0 96px #fff,
+            0 0 145px #fff;
+          }
+        }         
+/*top: 70px;*/
+  /*top: 3px;*/
+/* The animation code 
+for the instructions drawer*/
+@keyframes openInstructionsDrawer {
+  from {top: -300px;}
+  to {top: 70px;}
+}
+
+@keyframes closeInstructionsDrawer  {
+  from {top: 70px;}
+  to {top: -300px;}
+}
 
 
-/* -------- End animation styles -------- */
 
+}/* -------- End animation styles -------- */

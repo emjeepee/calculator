@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>find the odest</title>
+    <title>Art deco calculator</title>
 
     <style>
       html {
@@ -13,92 +13,542 @@
       }
     </style>
     <link rel="stylesheet" href="./styles.css">
+    
     <!-- For the Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Limelight&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
 </head>
 
   <body>
-<div>
+<!-- 
+TEST STUFF     TEST STUFF      TEST STUFF    TEST STUFF
+
+ 
+    <button class = "testButton">
+  <p>
+    Click me to test!
+  </p>
+</button>
+
+
+  <p class = "testPara1">     
+   culator …
+  </p>
+
+
+  <div class = "myTestDiv1">
+  <p class = "myTestDiv1para1">
+    <p class = "myTestDiv1para2"></p>
+  </p>
+</div>
+-->
+  <!-- First the instructions panel, which consists of 
+two divs, one being a header, the other being a 
+drawer that contains the actual instructions -->
+
+<div class = "hide1"></div>  <!--to obscure the walnut drawer as it moves up-->
+<div id = "ssInstructionsDiv" class = "instructionsDiv">  <!-- the div for the st steel button -->
+<p class = "instructionsHeader">  <!--the text "Instructions" -->
+  Instructions
+</p>
+</div> 
+
+<div id = "walnutInstrDrawer" class = "instrDrawerDiv"> <!-- for the walnut drawer -->
+<div class = "instrDrawerInternalDiv"> <!-- containing the text for the walnut drawer -->
+  <p class = "instrDrawerP">Large figures appear as, eg, 1.2x10e12, ie 1.2 times 10 to the power 12 </p>
+<p class = "instrDrawerP">Calculator can be dragged </p>
+<p class = "instrDrawerP">Neon display flickers. Effect varies with browser </p>
+</div>
+</div> 
+
+
+
+    <!--  
+END TEST STUFF     END TEST STUFF      END TEST STUFF     END TEST STUFF
+    -->
+
+
+    <!--  
+STRUCTURE  thurs23sept21 -- now out of date
+---------
+1) div of id outer1 encloses all other divs.
+It provides the rosewood case ofthe calculator
+2) div, id = "outer" (the sole child of #outer1),
+which contains: 
+NOTE: add overflowDiv  
+2a) a div for the display (id = "display")
+  This has a child <p> (.displayText), in which
+  JS puts the numbers the user types in.
+  2b) a div for the embossed cars in stainless steel.
+  This div has one background image.
+  2c) div #keyPadChrome, parent of #keypad
+  This has a background image
+  (the steel).
+  2d) div #keypad
+  This is a blank div that contains five divs: 
+  one for keys AC and divide
+  one for keys 7,8,9,x
+  one for keys 4,5,6,-
+  one for keys 1,2,3,+
+  one containing two divs:
+  one for keys 0 and .
+  one for key =
+
+A note on the keys
+------------------
+Each of the number keys, the dot key 
+and the AC key is a <button> with a 
+walnut background image. Each <button>
+contains two <p>s. One <p> is for 
+the light walnut text, the other <p> for 
+the black text, which goes behind 
+the walnut text and is offset to  
+top and left of the light walnut text. 
+The light walnut text has a grey shadow to
+bottom and right.
+The black text has a white shadow to
+top and left.  
+The operator buttons are the same 
+except they have a steel background 
+image. 
+
+All of the key buttons have these two
+properties:
+1) data-value 
+2) data-symbolType
+
+
+Key      data-value        data-symbolType   
+------------------------------------------
+AC       "AC"              "AC"
+/        "/"               "divide"
+*,-,+   "*","-","+"        "multPlusMinus"
+1-9      "1"-"9"           "number1-9"
+0        "0"               "zero" 
+.        "."               "dot"
+=        "="               "equals"
+
+-->
+
+<!-- 1) -->
+<div id = "outer1"> <!-- the div for the surrounding rosewood --> 
+
+  <!-- 2) -->
+  <div id = "outer"> <!-- the all containing div -->
+  
+    <!-- Overflow sign (lights up on text overflow) -->
+    <div class = "overflowDiv">
+    <p id = "overflowPara" class = "oveflowText overflowOff">Overflow!</p>
+    </div>
+
+    <!-- "Rounded" sign (lights up when code rounds an answer) -->
+    <!-- At some stage conert "truncate" to "rounded" below!!!-->
+    <div class = "truncateDiv">
+      <p id = "truncatePara" class = "truncateText truncateOff">Rounded</p>
+      </div>
+
+<!--
+displayPanel is the ss sheet through 
+which you can see the display characters
+-->
+<!-- overflowDiv is for the box that 
+  shows when there are more than 10 
+characters 
+data-pos="/"
+-->
+<div class = "displayPanel">
+
+  <div class = "displayCharBoxFrame">
+  <div id="pos1"
+  class = "displayCharacterBox">
+    <p id="pos1para1" class = "startupMessPoiret1">  
+     
+    </p>
+      <p id="pos1para2"  class = "startupMessPoiret2"> 
+    
+      </p>
+    </div>
+ </div>  
+
+ <div class = "displayCharBoxFrame">
+  <div id="pos2"
+  class = "displayCharacterBox">
+    <p id="pos2para1"   class = "startupMessPoiret1">  
+      </p>
+      <p id="pos2para2"  class = "startupMessPoiret2"> 
+      </p>
+    </div>
+ </div>  
+
+ <div class = "displayCharBoxFrame">
+  <div id="pos3"
+  class = "displayCharacterBox">
+    <p id="pos3para1"  class = "startupMessPoiret1">  
+      </p>
+      <p id="pos3para2"  class = "startupMessPoiret2"> 
+      </p>
+    </div>
+ </div>  
+
+ <div class = "displayCharBoxFrame">
+  <div id="pos4"
+  class = "displayCharacterBox">
+    <p id="pos4para1"  class = "startupMessPoiret1">  
+      </p>
+      <p id="pos4para2"  class = "startupMessPoiret2"> 
+      </p>
+    </div>
+ </div>  
+
+ <div class = "displayCharBoxFrame">
+  <div id="pos5"
+  class = "displayCharacterBox">
+    <p id="pos5para1"  class = "startupMessPoiret1">  
+      </p>
+      <p id="pos5para2"  class = "startupMessPoiret2"> 
+      </p>
+    </div>
+ </div>  
+
+ <div class = "displayCharBoxFrame">
+  <div id="pos6"
+  class = "displayCharacterBox">
+    <p id="pos6para1"  class = "startupMessPoiret1">  
+      </p>
+      <p id="pos6para2"  class = "startupMessPoiret2"> 
+      </p>
+    </div>
+ </div>  
+
+ <div class = "displayCharBoxFrame">
+  <div id="pos7"
+  class = "displayCharacterBox">
+    <p id="pos7para1"  class = "startupMessPoiret1">  
+      </p>
+      <p id="pos7para2"  class = "startupMessPoiret2"> 
+      </p>
+    </div>
+ </div>  
+
+ <div class = "displayCharBoxFrame">
+  <div id="pos8"
+  class = "displayCharacterBox">
+    <p id="pos8para1"  class = "startupMessPoiret1">  
+      </p>
+      <p id="pos8para2"  class = "startupMessPoiret2"> 
+      </p>
+    </div>
+ </div>  
+
+ <div class = "displayCharBoxFrame">
+  <div id="pos9"
+  class = "displayCharacterBox">
+    <p id="pos9para1"  class = "startupMessPoiret1">  
+      </p>
+      <p id="pos9para2"  class = "startupMessPoiret2"> 
+      </p>
+    </div>
+ </div>  
+
+ <div class = "displayCharBoxFrame">
+  <div id="pos10"
+  class = "displayCharacterBox">
+    <p id="pos10para1"  class = "startupMessPoiret1">  
+      </p>
+    <p id="pos10para2"  class = "startupMessPoiret2"> 
+      </p>
+    </div>
+ </div>  
+
+  </div>   <!--  end displayPanel -->
+
+
+
+    
+    
+    <!-- 2b) -->
+    <div id = "carEtc" > <!-- the div for car, etc -->
+    </div> <!-- end  div for car, etc -->
+    
+    <!-- 2c) -->
+    <div id = "keyPadChrome"> <!-- the div for chrome background for the keypad.-->
+    <!-- 2d) -->
+    <div id = "keyPad"> <!-- the div for the keypad. This div closed far off-->
+
+  <!-- Now the five containers for rows of buttons -->
+<!-- div for the AC and ÷ buttons -->
+  <div class = "containerForACdivide"> <!-- 13sept21 now also includes back button -->   
+  
     <!-- For the AC button -->
-<div>
-  <p>AC</p>
+  <div    id = "ACkey"
+          class = "walnutButton1 ACkeyImagePosition ACKeyPosition keyClassOperator "
+          data-value="AC"
+          data-symbolType="AC">
+          
+      <p class = "buttonTextWhSh bttnTxtWhShACPos1" >AC</p> 
+      <p class = "buttonTextLiWal bttnTxtLiWalACPos1 ACTextLiWalnImagePos">AC</p> 
+    
+  </div>
+
+<!-- For the cancel button -->
+<div id = "cancelKey"  ACkey cancelKey
+        class = "walnutButton cancelKeyImagePosition keyClassOperand cancelButtonPos" 
+        data-value="cancel"
+        data-symbolType="cancel">
+  <p class = "buttonTextWhSh bttnTxtWhShPosCancel">
+    C
+  </p>
+  <p class = "buttonTextLiWal bttnTxtLiWalPos1">
+    C
+  </p>  
+  </div>
+
+  
+<!-- For the divide button -->
+<div id = "divideKey" 
+        class = "brushedChromeButton keyClassOperator divideButtonPos"
+        data-value="/"
+        data-symbolType="divide">
+  <p class = "buttonTextWhSh bttnTxtWhShPos2">
+    ÷
+  </p>
+  <p class = "buttonTextLiWal bttnTxtLiWalPos2">
+    ÷
+  </p>  
+  </div>    
+  </div> <!-- end div for the AC and ÷ buttons -->
+
+<!-- ********* -->
+
+<div class = "keysContainer">   <!-- div for the 7,8,9,X buttons -->
+  <!-- For the 7 button -->
+  <div id = "7Key" 
+          class = "walnutButton sevenKeyImagePosition keyClassOperand" 
+          data-value="7"
+          data-symbolType="number1-9">
+          <p class = "buttonTextWhSh bttnTxtWhShPos8">7</p>
+          <p class = "buttonTextLiWal bttnTxtLiWalPos8 sevenTextLiWalnImagePos">7</p>
+  </div>
+  
+<!-- For the 8 button -->
+<div id = "8Key" 
+        class = "walnutButton eightKeyImagePosition keyClassOperand" 
+        data-value="8"
+        data-symbolType="number1-9">
+  <p class = "buttonTextWhSh bttnTxtWhShPos8Button">
+    8
+  </p>
+  <p class = "buttonTextLiWal bttnTxtWhShPos8Button">
+    8
+  </p>  
+  </div>
+<!-- For the 9 button -->
+<div id = "9Key"
+ class = "walnutButton nineKeyImagePosition keyClassOperand"
+  data-value="9"
+  data-symbolType="number1-9">
+  <p class = "buttonTextWhSh bttnTxtWhShPos9Button">
+    9
+  </p>
+  <p class = "buttonTextLiWal bttnTxtLiWalPos9Button nineTextLiWalnImagePos">
+    9
+  </p>  
+  </div>
+
+<!-- For the X (multiply) button -->
+<div id = "multKey" 
+        class = "brushedChromeButton multButtonPos keyClassOperator" 
+        data-value="*"
+        data-symbolType="multPlus">
+  <p class = "buttonTextWhSh bttnTxtWhShPos7">
+  x
+</p>
+<p class = "buttonTextLiWal bttnTxtLiWalPos7">
+  x
+</p>  
 </div>
-    <!-- For the divide button -->
-<div>
-  <p>/</p>
+</div> <!-- end div for the 7,8,9,X buttons -->
+
+<!-- ********* -->
+
+<div class = "keysContainer">   <!-- div for the 4,5,6,– buttons -->
+<!-- For the 4 button -->
+<div id = "4Key"  
+        class = "walnutButton fourKeyImagePosition keyClassOperand" 
+        data-value="4"
+        data-symbolType="number1-9">
+  <p class = "buttonTextWhSh bttnTxtWhShPos4Button">
+    4
+  </p>
+  <p class = "buttonTextLiWal bttnTxtLiWalPos1 fourTextLiWalnImagePos">
+    4
+  </p>  
+  </div>
+
+<!-- For the 5 button -->
+<div id = "5Key"
+        class = "walnutButton fiveKeyImagePosition keyClassOperand" 
+        data-value="5"
+        data-symbolType="number1-9">
+  <p class = "buttonTextWhSh bttnTxtWhShPos5Button">
+  5
+</p>
+<p class = "buttonTextLiWal bttnTxtLiWalPos5Button fiveTextLiWalnImagePos">
+  5
+</p>  
 </div>
-    <!-- For the 7 button -->
-<div>
-  <p>7</p>
-</div>
-    <!-- For the 8 button -->
-<div>
-  <p>8</p>
-</div>
-    <!-- For the 9 button -->
-<div>
-  <p>9</p>
-</div>
-    <!-- For the X button -->
-<div>
-  <p>X</p>
-</div>
-    <!-- For the 4 button -->
-<div>
-  <p>4</p>
-</div>
-    <!-- For the 5 button -->
-<div>
-  <p>5</p>
-</div>
-    <!-- For the 6 button -->
-<div>
-  <p>6</p>
-</div>
-    <!-- For the - button -->
-<div>
-  <p>-</p>
-</div>
-    <!-- For the 1 button -->
-<div>
-  <p>1</p>
-</div>
-    <!-- For the 2 button -->
-<div>
-  <p>2</p>
-</div>
-    <!-- For the 3 button -->
-<div>
-  <p>3</p>
-</div>
-    <!-- For the + button -->
-<div>
-  <p>+</p>
-</div>
-    <!-- For the 0 button -->
-<div>
-  <p>0</p>
-</div>
-    <!-- For the . button -->
-<div>
-  <p>.</p>
-</div>
-    <!-- For the = button -->
-<div>
-  <p>=</p>
+<!-- For the 6 button -->
+<div id = "6Key"
+        class = "walnutButton sixKeyImagePosition keyClassOperand" 
+        data-value="6"
+        data-symbolType="number1-9">
+  <p class = "buttonTextWhSh bttnTxtWhShPos10">
+  6
+</p>
+<p class = "buttonTextLiWal bttnTxtLiWalPos10 sixKeyImagePosition">
+  6
+</p>  
 </div>
 
+<!-- For the – button -->
+<div id = "minusKey" 
+        class = "brushedChromeButton minusButtonPos keyClassOperator" 
+        data-value="-"
+        data-symbolType="minus">
+  <p class = "buttonTextMinusPlusEqualsWhSh bttnTxtWhShPos6">
+–
+</p>
+<p class = "buttonTextMinusPlusEqualsLiWal bttnTxtLiWalPos6">
+–
+</p>  
 </div>
+
+</div>   <!-- end div for the 4,5,6,– buttons -->
+
+<!-- ********* -->
+
+<div class = "keysContainer">   <!-- div for the 1,2,3,+ buttons -->
+<!-- For the 1 button -->
+<div id = "1Key" 
+        class = "walnutButton keyClassOperand oneKeyImagePosition" 
+        data-value="1"
+        data-symbolType="number1-9">
+  <p class = "buttonTextWhSh bttnTxtWhShPos9 oneTextLiWalnImagePos">
+    1
+  </p>
+  <p class = "buttonTextLiWal  bttnTxtLiWalPos9 ">
+    1
+  </p>  
+  </div>
+
+<!-- For the 2 button -->
+<div id = "2Key"
+        class = "walnutButton twoKeyImagePosition keyClassOperand"
+        data-value="2"
+        data-symbolType="number1-9">
+  <p class = "buttonTextWhSh bttnTxtWhShPos1">
+  2
+</p>
+<p class = "buttonTextLiWal  bttnTxtLiWalPos2Button twoTextLiWalnImagePos">
+  2
+</p>  
+</div>
+<!-- For the 3 button -->
+<div id = "3Key" 
+        class = "walnutButton threeKeyImagePosition keyClassOperand" 
+        data-value="3"
+        data-symbolType="number1-9">
+  <p class = "buttonTextWhSh bttnTxtWhShPos1">
+  3
+</p>
+<p class = "buttonTextLiWal  bttnTxtLiWalPos3Button threeTextLiWalnImagePos">
+  3
+</p>  
+</div>
+
+<!-- For the + (plus) button -->
+<div id = "plusKey"  
+        class = "brushedChromeButton plusButtonPos keyClassOperator" 
+        data-value="+"
+        data-symbolType="multPlus">
+  <p class = "buttonTextMinusPlusEqualsWhSh bttnTxtWhShPos5">
++
+</p>
+<p class = "buttonTextMinusPlusEqualsLiWal  bttnTxtLiWalPos5">
++
+</p>  
+</div>
+  
+</div> <!-- end div for the 1,2,3,+ buttons -->
+
+<!-- ********* -->
+
+<div class = "containerZeroDotEquals">   <!-- div for div for the 0 and . buttons 
+and div for = button -->
+<div id = "containerForZeroDot"> <!-- div for the 0 and . buttons -->
+  <!-- the 0 button -->
+  <div id = "zeroKey"  
+          class = "walnutButton zeroKeyImagePosition keyClassOperand zeroKeyPosition"
+          data-value="0"
+          data-symbolType="number0">
+  <p class = "buttonTextWhSh bttnTxtWhShPos0Button">
+    0
+  </p>
+  <p class = "buttonTextLiWal bttnTxtLiWalPos0Button">
+    0
+  </p>  
+  </div>
+
+<!-- the . button -->
+<div    id = "dotKey" 
+        class = "walnutButton dotKeyImagePosition dotKeyPosition keyClassOperand"
+        data-value="."
+        data-symbolType="dot">
+  <p class = "buttonTextWhSh bttnTxtWhShPos3">
+  .
+</p>
+<p class = "buttonTextLiWal bttnTxtLiWalPos3">
+  .
+</p>  
+</div>
+</div> <!-- end div for the 0 and . buttons -->
+
+<div id = "containerForEquals"> <!-- div containing the = button -->
+  <!-- the = button -->
+  <div class = "brushedChromeButton keyClassOperator equalsButtonPos "
+          data-value="="
+          data-symbolType="equals">
+  <p class = "buttonTextMinusPlusEqualsWhSh bttnTxtWhShPos4">
+  =
+</p>
+<p class = "buttonTextMinusPlusEqualsLiWal bttnTxtLiWalPos4">
+  =
+</p>  
+</div>
+</div>  <!-- end div containing the = button -->
+
+</div>     <!-- end div for div for the 0 and . buttons 
+and for div for = button -->
+
+
+</div>   <!-- end div for the keypad -->
+</div>    <!-- end div for the (keypad parent) #keyPadChrome-->
+</div> <!-- end the all containing div -->
+
+</div> <!-- end the rosewood suround -->  
 
 
   
+  
   </body>
 
-<script type="text/javascript" src="./js/calculator.js">
-
-</script>
+<script type="text/javascript" src="./js/calculator.js"></script>
 
 
   
