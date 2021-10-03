@@ -233,21 +233,23 @@ z-index: -10;
 .instrDrawerP{
 
   position: relative;
-  left: 1px;
+  top: -6px;
+  left: 5px;
   /*color: #d38fe0;*/
-  color: #e29df5;
-  /*font-family: 'Poiret One', cursive;*/
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
+  /*color: #f6b9fa;*/
+  color: #fcb57c;
+  font-family: 'Poiret One', cursive;
+  /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+  font-size: 20px;
+  line-height: 21px;
   letter-spacing: 0.8px ;
 
 
   text-shadow:
-    0.5px 0.5px 1.5px  #000,
-    -0.5px -0.5px 2px #000,
+    1px 1px 1.5px  #000,
     
-    -1.3px -1.3px 1px #fff
+    
+    -1px -1px 2px #000
     ;
 
 background-color: rgba(150, 150, 150, 0.1) ;
@@ -779,7 +781,8 @@ as listed after @key-frames (at the end of this doc)
   
   overflow: hidden;
 
-  background-image: url("./images/ss6.jpg") ;
+  background-image: url("./images/ss7.jpg") ;
+  /*background-image: url("./images/ss7.jpg") ;*/
   background-repeat: no-repeat ;
   background-origin: content-box ;
   background-size: 230px 280px ;
@@ -1792,8 +1795,8 @@ buttons*/
   background-repeat: no-repeat ;
   
   background-origin: content-box ;
-  
-  background-size: 300px 203px ;
+  background-position: 0px 10px;
+  background-size: 30px 30px ;
    
   width: 100% ;
   height: 100% ;
