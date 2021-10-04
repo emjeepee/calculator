@@ -111,6 +111,10 @@ height: 27px;
   font-size: 26px;
   line-height: 27px;
   letter-spacing: 1px ;
+
+  text-shadow: 
+  3px 3px 8px  #000,
+    -3px -3px 7px #000 ;
   
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -217,8 +221,9 @@ z-index: -10;
 
 
 
-/*This holds the <p>s of
- the instruction text*/
+/*This div is the parent of 
+holds the <p>s of
+the instruction text*/
 .instrDrawerInternalDiv{
   position: absolute;
   left: 8px;
@@ -237,7 +242,7 @@ z-index: -10;
   left: 5px;
   /*color: #d38fe0;*/
   /*color: #f6b9fa;*/
-  color: #fcb57c;
+  color: #ffb6f8;
   font-family: 'Poiret One', cursive;
   /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
   font-size: 20px;
@@ -246,10 +251,8 @@ z-index: -10;
 
 
   text-shadow:
-    1px 1px 1.5px  #000,
-    
-    
-    -1px -1px 2px #000
+    1px 1px 5px  #000,
+    -1px -1px 5px #000
     ;
 
 background-color: rgba(150, 150, 150, 0.1) ;
@@ -781,7 +784,7 @@ as listed after @key-frames (at the end of this doc)
   
   overflow: hidden;
 
-  background-image: url("./images/ss7.jpg") ;
+  background-image: url("./images/ss8.jpg") ;
   /*background-image: url("./images/ss7.jpg") ;*/
   background-repeat: no-repeat ;
   background-origin: content-box ;
