@@ -102,7 +102,8 @@ box-shadow: 3px 3px 3px;
 
 
 /*For the text <p> 
-in the header div*/
+in the ss instruction
+ header panel div*/
 .instructionsHeader{
  
   width: 126px;
@@ -112,10 +113,13 @@ height: 27px;
   line-height: 27px;
   letter-spacing: 1px ;
 
+color: #f0bde8;
+
   text-shadow: 
   3px 3px 8px  #000,
     -3px -3px 7px #000 ;
   
+/*    
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -moz-background-clip:text;
@@ -123,7 +127,10 @@ height: 27px;
   background-repeat: no-repeat ;
   background-position: -40px -0px ;  
   background-origin: content-box ;
+  */
                    }
+
+
 
 /*The walnut drawer*/
 /*This is for the div 
